@@ -91,7 +91,7 @@
 		dat += "[use_He_has] no notable Psyker sensitivity."
 
 	if(istype(machine))
-		dat += "<a href='?src=\ref[machine];print=1'>Print</a> <a href='?src=\ref[machine];clear=1'>Clear Buffer</a>"
+		dat += "<a href='byond://?src=\ref[machine];print=1'>Print</a> <a href='byond://?src=\ref[machine];clear=1'>Clear Buffer</a>"
 		machine.last_assay = dat
 		return
 

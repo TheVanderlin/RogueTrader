@@ -110,12 +110,12 @@
 	. += "<b>Automatic Cleaner v1.0</b>"
 
 /mob/living/bot/cleanbot/GetInteractPanel()
-	. = "Cleans blood: <a href='?src=\ref[src];command=blood'>[blood ? "Compliance" : "No"]</a>"
-	. += "<br>Patrol station: <a href='?src=\ref[src];command=patrol'>[will_patrol ? "Compliance" : "No"]</a>"
+	. = "Cleans blood: <a href='byond://?src=\ref[src];command=blood'>[blood ? "Compliance" : "No"]</a>"
+	. += "<br>Patrol station: <a href='byond://?src=\ref[src];command=patrol'>[will_patrol ? "Compliance" : "No"]</a>"
 
 /mob/living/bot/cleanbot/GetInteractMaintenance()
-	. = "Odd looking screw twiddled: <a href='?src=\ref[src];command=screw'>[screwloose ? "Compliance" : "No"]</a>"
-	. += "<br>Weird button pressed: <a href='?src=\ref[src];command=oddbutton'>[oddbutton ? "Compliance" : "No"]</a>"
+	. = "Odd looking screw twiddled: <a href='byond://?src=\ref[src];command=screw'>[screwloose ? "Compliance" : "No"]</a>"
+	. += "<br>Weird button pressed: <a href='byond://?src=\ref[src];command=oddbutton'>[oddbutton ? "Compliance" : "No"]</a>"
 
 /mob/living/bot/cleanbot/ProcessCommand(mob/user, command, href_list)
 	..()

@@ -1007,7 +1007,7 @@
 			dat += "<h3>Machine setup menu</h3>"
 			dat += "<div class='statusDisplay'>"
 			dat += "<font color='green'>credits stored - [stored_credits]</font>"
-			dat += "<a href='?src=\ref[src];removecredits=1'>Unload</a>"
+			dat += "<a href='byond://?src=\ref[src];removecredits=1'>Unload</a>"
 			dat += "<h4> Items </h4> "
 
 			if(content.len == 0)
@@ -1017,15 +1017,15 @@
 					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
 					dat += "<b>[Itm.name]</b> - [content[Itm]] credits"
-					dat += "<a href='?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
-					dat += "<a href='?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
+					dat += "<a href='byond://?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
+					dat += "<a href='byond://?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
 
 		// --- Vend
 		if(STATE_VEND)
 			dat += "<h3>Select an item</h3>"
 			dat += "<div class='statusDisplay'>"
 			dat += "<font color = 'red'>Waiting for [expected_price] credits!</font>"
-			dat += "<a href='?src=\ref[src];back=1'> Back</a> "
+			dat += "<a href='byond://?src=\ref[src];back=1'> Back</a> "
 
 		// --- Lock Open
 		if(STATE_LOCKOPEN)

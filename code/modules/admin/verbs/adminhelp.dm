@@ -115,7 +115,7 @@ var/global/list/adminhelp_ignored_words = list("unknown","the","a","an","of","mo
 	//Options bar:  mob, details ( admin = 2, dev = 3, character name (0 = just ckey, 1 = ckey and character name), link? (0 no don't make it a link, 1 do so),
 	//		highlight special roles (0 = everyone has same looking name, 1 = antags / special roles get a golden name)
 
-	msg = SPAN_NOTICE("<b>[SPAN_COLOR("red", "HELP: ")][get_options_bar(mob, 2, 1, 1, 1, ticket)] (<a href='?_src_=holder;take_ticket=\ref[ticket]'>[(ticket.status == TICKET_OPEN) ? "TAKE" : "JOIN"]</a>) (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>):</b> [msg]")
+	msg = SPAN_NOTICE("<b>[SPAN_COLOR("red", "HELP: ")][get_options_bar(mob, 2, 1, 1, 1, ticket)] (<a href='?_src_=holder;take_ticket=\ref[ticket]'>[(ticket.status == TICKET_OPEN) ? "TAKE" : "JOIN"]</a>) (<a href='byond://?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>):</b> [msg]")
 
 	var/admin_number_afk = 0
 
@@ -127,7 +127,7 @@ var/global/list/adminhelp_ignored_words = list("unknown","the","a","an","of","mo
 				sound_to(X, sound('sound/ui/pm-notify.ogg', volume = 40))
 			to_chat(X, msg)
 	//show it to the person adminhelping too
-	to_chat(src, SPAN_CLASS("staff_pm", "PM to-<b>Staff</b> (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>): [original_msg]"))
+	to_chat(src, SPAN_CLASS("staff_pm", "PM to-<b>Staff</b> (<a href='byond://?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>): [original_msg]"))
 	var/admin_number_present = length(GLOB.admins) - admin_number_afk
 	log_admin("HELP: [key_name(src)]: [original_msg] - heard by [admin_number_present] non-AFK admins.")
 	if(admin_number_present <= 0)

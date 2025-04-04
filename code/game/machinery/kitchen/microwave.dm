@@ -273,7 +273,7 @@
 				if (reagent.type == /datum/reagent/frostoil)
 					display_name = "Coldsauce"
 				dat += "<b>[display_name]:</b> [reagent.volume] unit\s"
-		dat += "<hr><br><a href='?src=\ref[src];action=cook'>Turn on!<br><a href='?src=\ref[src];action=dispose'>Eject ingredients!"
+		dat += "<hr><br><a href='byond://?src=\ref[src];action=cook'>Turn on!<br><a href='byond://?src=\ref[src];action=dispose'>Eject ingredients!"
 	show_browser(user, "<head><title>Microwave Controls</title></head><tt>[jointext(dat,"<br>")]</tt>", "window=microwave")
 	onclose(user, "microwave")
 
