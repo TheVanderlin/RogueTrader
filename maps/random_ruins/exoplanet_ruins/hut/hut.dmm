@@ -67,7 +67,6 @@
 /area/template_noop)
 "p" = (
 /obj/random/junk,
-/obj/random/loot,
 /turf/simulated/floor/tiled/dark,
 /area/template_noop)
 "q" = (
@@ -88,8 +87,6 @@
 "u" = (
 /obj/structure/table/rack,
 /obj/item/clothing/glasses/eyepatch/hud/medical,
-/obj/random/loot,
-/obj/random/loot,
 /obj/random/hat,
 /obj/random/voidsuit,
 /turf/simulated/floor/tiled/dark,

@@ -9762,14 +9762,6 @@
 	},
 /turf/simulated/floor/warhammer/coralg,
 /area/bridge)
-"Qq" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id_tag = "elevatorcmd";
-	name = "Restricted Lockdown"
-	},
-/turf/simulated/floor/warhammer/metal/alt,
-/area/hallway/primary/bridge/aft)
 "Qv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -10734,12 +10726,6 @@
 /obj/paint/meatstation,
 /turf/simulated/wall/titanium,
 /area/aquila/airlock)
-"Xq" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/catwalk,
-/turf/simulated/open,
-/area/maintenance/bridge/foreport)
 "Xx" = (
 /obj/machinery/door/unpowered/inn/bookcase,
 /turf/simulated/floor/warhammer/darkwood,
@@ -23684,7 +23670,7 @@ TX
 xi
 xr
 xB
-Xq
+Fz
 tg
 tg
 tg
@@ -25481,7 +25467,7 @@ gm
 gm
 gm
 gm
-Qq
+kM
 kM
 YS
 kM
@@ -25683,7 +25669,7 @@ gm
 gm
 gm
 gm
-Qq
+kM
 kM
 YS
 kM
@@ -25885,7 +25871,7 @@ gm
 gm
 gm
 gm
-Qq
+kM
 kN
 lH
 mV

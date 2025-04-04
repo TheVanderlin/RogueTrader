@@ -53,8 +53,6 @@
 
 /obj/item/material/twohanded/ravenor/Value(base)
 	return base
-	for(var/a in contents)
-		base += get_value(a)
 
 /obj/item/spacecash/Value()
 	return worth

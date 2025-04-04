@@ -5025,17 +5025,6 @@
 /obj/machinery/oxygen_pump{
 	pixel_y = 32
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	dir = 4;
-	display_name = "Aft Dock (Petrov)";
-	frequency = 1380;
-	id_tag = "petrov_shuttle_dock_airlock";
-	pixel_x = -24;
-	tag_airpump = "petrov_shuttle_dock_pump";
-	tag_chamber_sensor = "petrov_shuttle_dock_sensor";
-	tag_exterior_door = "petrov_shuttle_dock_outer";
-	tag_interior_door = "petrov_shuttle_dock_inner"
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/fifthdeck/aft)
 "mw" = (
@@ -12545,17 +12534,6 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	dir = 8;
-	display_name = "Aft Dock (Petrov)";
-	frequency = 1380;
-	id_tag = "petrov_shuttle_airlock";
-	pixel_x = 24;
-	tag_airpump = "petrov_shuttle_dock_pump";
-	tag_chamber_sensor = "petrov_shuttle_dock_sensor";
-	tag_exterior_door = "petrov_shuttle_dock_outer";
-	tag_interior_door = "petrov_shuttle_dock_inner"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/petrov/hallwaya)

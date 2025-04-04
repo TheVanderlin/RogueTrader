@@ -234,7 +234,6 @@
 /area/casino/casino_maintenance)
 "aJ" = (
 /obj/structure/table/steel_reinforced,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plate,
 /area/casino/casino_bridge)
 "aL" = (
@@ -1909,7 +1908,6 @@
 /turf/simulated/floor/warhammer/ceramic/blackstone,
 /area/casino/casino_security)
 "fx" = (
-/obj/random/loot,
 /turf/simulated/floor/warhammer/darkwood,
 /area/casino/casino_mainfloor)
 "fy" = (
@@ -3738,7 +3736,6 @@
 /area/casino/casino_mainfloor)
 "kr" = (
 /obj/structure/table/marble,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/ceramic/blackstone,
 /area/casino/casino_mainfloor)
 "ks" = (
@@ -3840,7 +3837,6 @@
 /turf/simulated/floor/warhammer/darkwood,
 /area/casino/casino_mainfloor)
 "kH" = (
-/obj/random/loot,
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -5609,7 +5605,6 @@
 /turf/simulated/floor/warhammer/plate,
 /area/casino/casino_cutter)
 "QD" = (
-/obj/random/loot,
 /turf/simulated/floor/warhammer/fancyfloor/carpet{
 	dir = 8
 	},

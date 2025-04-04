@@ -52,11 +52,9 @@
 
 /obj/item/clothing/Destroy()
 	for (var/obj/item/clothing/accessory/A as anything in accessories)
-		remove_accessory(null, A)
 		qdel(A)
-	accessories.Cut()
-	accessories = null
-	. = ..()
+	LAZYCLEARLIST(accessories)
+	return ..()
 
 
 // Updates the icons of the mob wearing the clothing item, if any.

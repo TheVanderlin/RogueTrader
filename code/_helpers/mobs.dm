@@ -324,7 +324,7 @@
 		res += "bio"
 	return english_list(res)
 
-proc/random_ork_name()
+/proc/random_ork_name()
 	var/orkfirstnamepart = list("Git","Zog","Cog","Grot","Dakka","Choppa","Axe","Killa", "Stabba", "War", "Dome", "Grave", "Sneak", "Ghaz", "Mag", "Wild", "Kill", "Mad", "Grim", "Buzz", "Wulrd", "Burn")
 	var/orksecondnamepart = list("killa","smasha","burna","chewa","stabba", "choppa", "shredda", "ghkull", "snik", "chompa", "stompa", "cookah", "krusha", "gob", "chewa", "wrecka")
 	var/orktitles = list("Da Bigga","Da Bitey","Da Kunnin'","Da Brutal","Da Stabby","Da Sneaky", "Da Green", "Da Big", "Da Small", "Beakie-Slaya")
@@ -333,6 +333,6 @@ proc/random_ork_name()
 	else
 		return pick(orkfirstnamepart) + pick(orksecondnamepart)
 
-proc/random_astartes_name()
+/proc/random_astartes_name()
 	var/astartesname = list("Indrick", "Leonitas", "Sendidi", "Daed", "Phaeton", "Brant", "Donatos", "Erasmus", "Telamon", "Kolak", "Elias", "Solomon", "Balthus", "Lucius", "Virius", "Portan", "Falchian", "Taelos", "Vaas", "Vinyar", "Jexad", "Lyonus", "Alerin", "Koryn", "Rykas", "Adrax", "Pellos", "Kortar", "Cato", "Marneus")
 	return "Brother" + " " + pick(astartesname)

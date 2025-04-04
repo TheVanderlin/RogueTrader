@@ -28,7 +28,7 @@
 
 
 /obj/item/clothing/accessory/Destroy()
-	on_removed()
+	parent = null
 	return ..()
 
 

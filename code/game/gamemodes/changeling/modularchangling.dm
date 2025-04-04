@@ -442,7 +442,7 @@ var/global/list/datum/power/genestealer/powerinstances = list()
 		if(!istype(M))
 			return
 		purchasePower(M, href_list["P"])
-		call(/datum/genestealer/proc/EvolutionMenu)()
+		EvolutionMenu()
 
 
 

@@ -212,7 +212,6 @@
 /area/map_template/deepmaint)
 "uZ" = (
 /obj/structure/table/steel,
-/obj/random/loot,
 /turf/simulated/floor/steel_dirty,
 /area/map_template/deepmaint)
 "vh" = (
@@ -550,7 +549,6 @@
 	icon_state = "warning"
 	},
 /obj/random/trash,
-/obj/random/loot,
 /turf/simulated/floor/plating,
 /area/map_template/deepmaint)
 "Vi" = (

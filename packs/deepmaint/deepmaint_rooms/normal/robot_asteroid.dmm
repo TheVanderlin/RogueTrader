@@ -234,7 +234,6 @@
 "O" = (
 /obj/structure/table/steel,
 /obj/floor_decal/corner/brown/mono,
-/obj/random/loot,
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/deepmaint)
 "P" = (

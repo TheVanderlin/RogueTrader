@@ -23,8 +23,6 @@
 /obj/structure/closet/crate,
 /obj/item/archaeological_find/shell,
 /obj/item/archaeological_find/fossil,
-/obj/random/loot,
-/obj/random/loot,
 /obj/landmark/clear,
 /turf/template_noop,
 /area/template_noop)

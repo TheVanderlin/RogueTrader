@@ -258,7 +258,6 @@
 /area/map_template/icarus/sci)
 "fE" = (
 /obj/structure/table/steel,
-/obj/random/loot,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
 "fJ" = (
@@ -612,7 +611,6 @@
 /area/map_template/icarus/bridge)
 "rn" = (
 /obj/structure/closet/crate,
-/obj/random/loot,
 /turf/simulated/floor/tiled/techmaint,
 /area/map_template/icarus/bridge)
 "rr" = (
@@ -1481,7 +1479,6 @@
 /area/map_template/icarus/bridge)
 "YB" = (
 /obj/structure/table/glass,
-/obj/random/loot,
 /turf/simulated/floor/tiled/dark,
 /area/map_template/icarus/bridge)
 "YJ" = (

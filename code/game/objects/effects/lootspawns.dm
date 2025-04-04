@@ -1,599 +1,876 @@
-/obj/landmark/rav/stubpistol/New()
-	new /obj/item/gun/projectile/pistol/stub(src.loc)
-	new /obj/item/ammo_magazine/pistol(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/villierspistol/New()
-	new /obj/item/gun/projectile/pistol/stub/villiers(src.loc)
-	new /obj/item/ammo_magazine/pistol(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/talonpistol/New()
-	new /obj/item/gun/projectile/pistol/stub/talon(src.loc)
-	new /obj/item/ammo_magazine/pistol/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/snubpistol/New()
-	new /obj/item/gun/projectile/pistol/stub/snub(src.loc)
-	new /obj/item/ammo_magazine/pistol/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/slugpistol/New()
-	new /obj/item/gun/projectile/pistol/slug(src.loc)
-	new /obj/item/ammo_magazine/magnum(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/oldslugpistol/New()
-	new /obj/item/gun/projectile/pistol/slug/old(src.loc)
-	new /obj/item/ammo_magazine/magnum/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/shotgunslugpistol/New()
-	new /obj/item/gun/projectile/pistol/slug/shotgun(src.loc)
-	new /obj/item/ammo_magazine/shotgunmag/flechette(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/imperialrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial(src.loc)
-	new /obj/item/ammo_magazine/speedloader(src.loc)
-	new /obj/item/ammo_magazine/speedloader(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/holdoutrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial/holdout(src.loc)
-	new /obj/item/ammo_magazine/speedloader/small(src.loc)
-	new /obj/item/ammo_magazine/speedloader/small(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/heavyrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial/heavy(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/matebaheavyrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial/heavy/mateba(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver/ap(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/bountyheavyrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial/heavy/bounty(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver(src.loc)
-	new /obj/item/ammo_magazine/speedloader/revolver/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/autogunrevolver/New()
-	new /obj/item/gun/projectile/revolver/imperial/heavy/autogun(src.loc)
-	new /obj/item/ammo_magazine/speedloader/militarum(src.loc)
-	new /obj/item/ammo_magazine/speedloader/militarum/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/boltpistol/New()
-	new /obj/item/gun/projectile/pistol/bolt_pistol(src.loc)
-	new /obj/item/ammo_magazine/bolt_pistol_magazine(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/drusianboltpistol/New()
-	new /obj/item/gun/projectile/pistol/bolt_pistol/drusian(src.loc)
-	new /obj/item/ammo_magazine/bolt_pistol_magazine(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/laspistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol(src.loc)
-	new /obj/item/cell/device/standard(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/accatranlaspistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol/accatran(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/grimlaspistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol/grim(src.loc)
-	new /obj/item/cell/device/high(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/luciuslaspistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol/lucius(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/militarumlaspistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol/militarum(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/sawnshotgun/New()
-	new /obj/item/gun/projectile/shotgun/doublebarrel/sawn(src.loc)
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hellpistol/New()
-	new /obj/item/gun/energy/lasgun/laspistol/hellpistol(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/plasmapistol/New()
-	new /obj/item/gun/energy/plasma/pistol(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/archeotechplasmapistol/New()
-	new /obj/item/gun/energy/plasma/pistol/archeotech(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/mechanicusplasmapistol/New()
-	new /obj/item/gun/energy/plasma/pistol/mechanicus(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/xenosplasmapistol/New()
-	new /obj/item/gun/energy/plasma/pistol/xenos(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/chaosplasmapistol/New()
-	new /obj/item/gun/energy/plasma/pistol/chaos(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/taupulsepistol/New()
-	new /obj/item/gun/energy/tau/pulsepistol(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/autogun/New()
-	new /obj/item/gun/projectile/automatic/autogun(src.loc)
-	new /obj/item/ammo_magazine/autogun(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/kriegautogun/New()
-	new /obj/item/gun/projectile/automatic/autogun/krieg(src.loc)
-	new /obj/item/ammo_magazine/heavy/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/valhallaautogun/New()
-	new /obj/item/gun/projectile/automatic/autogun/valhalla(src.loc)
-	new /obj/item/ammo_magazine/autogun/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/a80autogun/New()
-	new /obj/item/gun/projectile/automatic/autogun/a80(src.loc)
-	new /obj/item/ammo_magazine/autogun(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/stubberautogun/New()
-	new /obj/item/gun/projectile/automatic/autogun/stubber(src.loc)
-	new /obj/item/ammo_magazine/autogunheavy(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/slugrifle/New()
-	new /obj/item/gun/projectile/automatic/slugrifle(src.loc)
-	new /obj/item/ammo_magazine/heavy(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/agrislugrifle/New()
-	new /obj/item/gun/projectile/automatic/slugrifle/agri(src.loc)
-	new /obj/item/ammo_magazine/magnum/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scipioslugrifle/New()
-	new /obj/item/gun/projectile/automatic/slugrifle/scipio(src.loc)
-	new /obj/item/ammo_magazine/pistol/small/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/lockebolter/New()
-	new /obj/item/gun/projectile/automatic/boltrifle/lockebolter(src.loc)
-	new /obj/item/ammo_magazine/bolt_rifle_magazine(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/drusianlockebolter/New()
-	new /obj/item/gun/projectile/automatic/boltrifle/lockebolter/drusian(src.loc)
-	new /obj/item/ammo_magazine/bolt_rifle_magazine(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/doublebarrelshotgun/New()
-	new /obj/item/gun/projectile/shotgun/doublebarrel(src.loc)
-	new /obj/item/ammo_magazine/shotholder/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/voxlegisshotgun/New()
-	new /obj/item/gun/projectile/shotgun/pump/voxlegis(src.loc)
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/magraveshotgun/New()
-	new /obj/item/gun/projectile/shotgun/pump/voxlegis/magrave(src.loc)
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/sawnshotgun/New()
-	new /obj/item/gun/projectile/shotgun/pump/voxlegis/sawn(src.loc)
-	new /obj/item/ammo_magazine/shotholder/flechette(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/imperialsniper/New()
-	new /obj/item/gun/projectile/heavysniper/boltaction/imperial(src.loc)
-	new /obj/item/ammo_magazine/speedloader/clip/stub(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/cruciblesniper/New()
-	new /obj/item/gun/projectile/heavysniper/boltaction/imperial/crucible(src.loc)
-	new /obj/item/ammo_magazine/speedloader/clip/stub/ms(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/triangongsniper/New()
-	new /obj/item/gun/projectile/heavysniper/boltaction/imperial/triangong(src.loc)
-	new /obj/item/ammo_magazine/speedloader/clip/stub/ap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/throwersniper/New()
-	new /obj/item/gun/projectile/heavysniper/boltaction/imperial/thrower(src.loc)
-	new /obj/item/ammo_magazine/speedloader/clip/sniper/xenos(src.loc)
-	new /obj/item/ammo_magazine/speedloader/clip/sniper/xenos(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/lasgun/New()
-	new /obj/item/gun/energy/lasgun(src.loc)
-	new /obj/item/cell/device/high(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/kantrael/New()
-	new /obj/item/gun/energy/lasgun/kantrael(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/accatran/New()
-	new /obj/item/gun/energy/lasgun/accatran(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/lucius/New()
-	new /obj/item/gun/energy/lasgun/lucius(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/catachan/New()
-	new /obj/item/gun/energy/lasgun/catachan(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/triplex/New()
-	new /obj/item/gun/energy/lasgun/triplex(src.loc)
-	new /obj/item/cell/device/high/laspack(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hotshot/New()
-	new /obj/item/gun/energy/lasgun/hotshot(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/krieg/New()
-	new /obj/item/gun/energy/lasgun/hotshot/krieg(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/masterwork/New()
-	new /obj/item/gun/energy/lasgun/hotshot/masterwork(src.loc)
-	new /obj/item/cell/device/high/laspack/hotshot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/volkite/New()
-	new /obj/item/gun/energy/lasgun/hotshot/volkite(src.loc)
-	new /obj/item/cell/device/high/mechanicus(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/pulserifle/New()
-	new /obj/item/gun/energy/tau/pulserifle(src.loc)
-	new /obj/item/cell/device/high/xenos(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/railgun/New()
-	new /obj/item/gun/energy/tau/railgun(src.loc)
-	new /obj/item/cell/device/high/xenos(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/plasma/New()
-	new /obj/item/gun/energy/plasma(src.loc)
-	new /obj/item/cell/device/high/mechanicus(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/meltagun/New()
-	new /obj/item/gun/energy/meltagun(src.loc)
-	new /obj/item/cell/device/high/mechanicus(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/multi/New()
-	new /obj/item/gun/energy/meltagun/multi(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/zealot/New()
-	new /obj/item/clothing/suit/armor/grim(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/zealot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/mordian/New()
-	new /obj/item/clothing/suit/armor/grim/mordian(src.loc)
-	new /obj/item/clothing/accessory/leg_guards/flak(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/cadianconscript/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/conscript(src.loc)
-	new /obj/item/clothing/accessory/leg_guards/flak(src.loc)
-	new /obj/item/clothing/head/helmet/flak/conscript(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/bountyhunter/New()
-	new /obj/item/clothing/suit/armor/grim/bountyhunter(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/bountyhead(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/bondsman/New()
-	new /obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/medicae/New()
-	new /obj/item/clothing/suit/armor/grim/medicae(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimcap/medicae(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/cuirass/New()
-	new /obj/item/clothing/suit/armor/feudal/cuirass(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hauberk(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/breastplate/New()
-	new /obj/item/clothing/suit/armor/feudal/breastplate(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/metalvisor(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hauberkheavy/New()
-	new /obj/item/clothing/suit/armor/feudal/hauberkheavy(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hauberk(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/fullplate/New()
-	new /obj/item/clothing/suit/armor/feudal/fullplate(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/alt(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/heavyplate/New()
-	new /obj/item/clothing/suit/armor/feudal/heavyplate(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/holyplate/New()
-	new /obj/item/clothing/suit/armor/feudal/holyplate(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/hero(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/holyplatebrigandine/New()
-	new /obj/item/clothing/suit/armor/feudal/holyplate/brigandine(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/zealot(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/siege/New()
-	new /obj/item/clothing/suit/armor/feudal(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/siege(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/tribal/New()
-	new /obj/item/clothing/suit/armor/grim/tribal(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/tribalplate/New()
-	new /obj/item/clothing/suit/armor/grim/tribal/plate(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/bone(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiver/New()
-	new /obj/item/clothing/suit/armor/grim/hiver(src.loc)
-	new /obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiverleather/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/leather(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiverleatherjacket/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/leatherjacket(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiverslumcoat/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/slumcoat(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimcap(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiversmuggler/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/smuggler(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hivertrenchcoat/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/trenchcoat(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hiverscum/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/scum(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/hivercarapace/New()
-	new /obj/item/clothing/suit/armor/grim/hiver/carapace(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapforged/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapduster/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/duster(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/metal(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapflakcuirass/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/flakcuirass(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapheavyflak/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/heavyflak(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/armoredtrench/New()
-	new /obj/item/clothing/suit/armor/grim/armoredtrench(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/heavyflak/New()
-	new /obj/item/clothing/suit/armor/grim/merc/heavyflak(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/ghillieflak/New()
-	new /obj/item/clothing/suit/armor/grim/ghillieflak(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/foxhelm(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/cadianheavy/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/heavy(src.loc)
-	new /obj/item/clothing/head/helmet/flak/carapace(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/krieger/New()
-	new /obj/item/clothing/suit/armor/grim/krieger(src.loc)
-	new /obj/item/clothing/head/helmet/flak/krieg(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/maccabian/New()
-	new /obj/item/clothing/suit/armor/grim/maccabian(src.loc)
-	new /obj/item/clothing/head/helmet/flak/krieg(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/enforcer/New()
-	new /obj/item/clothing/suit/armor/enforcer2(src.loc)
-	new /obj/item/clothing/head/helmet/enforcer(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapcarapace/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/carapace(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapcarapace2/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/carapace2(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapcarapace3/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/carapace3(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapcuirass/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/carapacecuirass(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapranger/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/ranger(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapranger2/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/ranger2(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger/alt(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/scrapranger3/New()
-	new /obj/item/clothing/suit/armor/grim/scrapforged/ranger3(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/ghillieflak/New()
-	new /obj/item/clothing/suit/armor/grim/ghillieflak(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/foxhelm(src.loc)
-	qdel(src)
-
-/obj/landmark/rav/superrare1/New()
-	new /obj/item/clothing/suit/armor/grim/agent(src.loc)
-	new /obj/item/clothing/head/helmet/inquisition/acolyte(src.loc)
-
-/obj/landmark/rav/superrare2/New()
-	new /obj/item/clothing/suit/armor/greypa(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/poweredhelm(src.loc)
-
-/obj/landmark/rav/superrare3/New()
-	new /obj/item/clothing/suit/armor/ancientpowerarmor(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/poweredhelm(src.loc)
-
-/obj/landmark/rav/superrare4/New()
-	new /obj/item/clothing/suit/armor/renegadepowerarmour(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger/alt(src.loc)
-
-/obj/landmark/rav/superrare5/New()
-	new /obj/item/clothing/suit/armor/seolarmor(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimhelm/xenos(src.loc)
-
-/obj/landmark/rav/superrare5a/New()
-	new /obj/item/clothing/suit/armor/seolsuit(src.loc)
-
-/obj/landmark/rav/superrare6/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/conscript/pdf(src.loc)
-	new /obj/item/clothing/head/helmet/flak/conscript/pdf(src.loc)
-
-/obj/landmark/rav/superrare7/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/conscript/heavy(src.loc)
-	new /obj/item/clothing/head/helmet/flak/conscript/pdf/heavy(src.loc)
-
-/obj/landmark/rav/superrare8/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/heavy(src.loc)
-	new /obj/item/clothing/head/helmet/flak(src.loc)
-
-/obj/landmark/rav/superrare9/New()
-	new /obj/item/clothing/suit/armor/grim/krieger(src.loc)
-	new /obj/item/clothing/head/helmet/flak/krieg(src.loc)
-
-/obj/landmark/rav/superrare10/New()
-	new /obj/item/clothing/suit/armor/grim/krieger/grenadier(src.loc)
-	new /obj/item/clothing/head/helmet/flak/krieg/grenadier(src.loc)
-
-/obj/landmark/rav/superrare11/New()
-	new /obj/item/clothing/suit/armor/grim/mordian(src.loc)
-	new /obj/item/clothing/head/helmet/guardcap/mordian(src.loc)
-
-/obj/landmark/rav/superrare12/New()
-	new /obj/item/clothing/suit/armor/grim/maccabian(src.loc)
-	new /obj/item/clothing/head/helmet/flak/maccabian(src.loc)
-
-/obj/landmark/rav/superrare13/New()
-	new /obj/item/clothing/suit/armor/stormtrooper(src.loc)
-	new /obj/item/clothing/head/helmet/flak/tempestus(src.loc)
-
-/obj/landmark/rav/superrare14/New()
-	new /obj/item/clothing/suit/armor/kasrkin(src.loc)
-	new /obj/item/clothing/head/helmet/flak/kasrkin(src.loc)
-
-/obj/landmark/rav/superrare15/New()
-	new /obj/item/clothing/suit/armor/grim/cadian/officer_formal(src.loc)
-	new /obj/item/clothing/head/helmet/guardcap/sergeant(src.loc)
-
-/obj/landmark/rav/superrare16/New()
-	new /obj/item/clothing/suit/armor/sister/sacredrosepower(src.loc)
-	new /obj/item/clothing/head/helmet/sisterofbattle(src.loc)
-
-/obj/landmark/rav/superrare17/New()
-	new /obj/item/clothing/suit/armor/sister/sacredrosepower(src.loc)
-	new /obj/item/clothing/head/helmet/sisterofbattle(src.loc)
-
-/obj/landmark/rav/superrare18/New()
-	new /obj/item/clothing/suit/armor/sister/bloodyrosepower(src.loc)
-	new /obj/item/clothing/head/helmet/sisterofbattle/brsister(src.loc)
-
-/obj/landmark/rav/superrare19/New()
-	new /obj/item/clothing/suit/armor/sister/martyredpower(src.loc)
-	new /obj/item/clothing/head/helmet/sisterofbattle/mlsister(src.loc)
-
-/obj/landmark/rav/superrare20/New()
-	new /obj/item/clothing/suit/armor/sister/repentia(src.loc)
-	new /obj/item/clothing/head/helmet/sisterofbattle/repentia(src.loc)
-
-/obj/landmark/rav/superrare21/New()
-	new /obj/item/clothing/suit/armor/sister/novitae(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimcap/hospitallerhelm(src.loc)
-
-/obj/landmark/rav/superrare22/New()
-	new /obj/item/clothing/suit/armor/sister/hospitaller(src.loc)
-	new /obj/item/clothing/head/helmet/pilgrimcap/hospitallerhelm(src.loc)
+/obj/spawner/simple/stubpistol
+	name = "stubpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/stub = 1,
+		/obj/item/ammo_magazine/pistol = 1
+	)
+
+/obj/spawner/simple/villierspistol
+	name = "villierspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/stub/villiers = 1,
+		/obj/item/ammo_magazine/pistol = 1
+	)
+
+/obj/spawner/simple/talonpistol
+	name = "talonpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/stub/talon = 1,
+		/obj/item/ammo_magazine/pistol/ap = 1
+	)
+
+/obj/spawner/simple/snubpistol
+	name = "snubpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/stub/snub = 1,
+		/obj/item/ammo_magazine/pistol/ap = 1
+	)
+
+/obj/spawner/simple/slugpistol
+	name = "slugpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/slug = 1,
+		/obj/item/ammo_magazine/magnum = 1
+	)
+
+/obj/spawner/simple/oldslugpistol
+	name = "oldslugpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/slug/old = 1,
+		/obj/item/ammo_magazine/magnum/ms = 1
+	)
+
+/obj/spawner/simple/shotgunslugpistol
+	name = "shotgunslugpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/slug/shotgun = 1,
+		/obj/item/ammo_magazine/shotgunmag/flechette = 1
+	)
+
+/obj/spawner/simple/imperialrevolver
+	name = "imperialrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial = 1,
+		/obj/item/ammo_magazine/speedloader = 1,
+		/obj/item/ammo_magazine/speedloader = 1
+	)
+
+/obj/spawner/simple/holdoutrevolver
+	name = "holdoutrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial/holdout = 1,
+		/obj/item/ammo_magazine/speedloader/small = 1,
+		/obj/item/ammo_magazine/speedloader/small = 1
+	)
+
+/obj/spawner/simple/heavyrevolver
+	name = "heavyrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial/heavy = 1,
+		/obj/item/ammo_magazine/speedloader/revolver = 1,
+		/obj/item/ammo_magazine/speedloader/revolver/ms = 1
+	)
+
+/obj/spawner/simple/matebaheavyrevolver
+	name = "matebaheavyrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial/heavy/mateba = 1,
+		/obj/item/ammo_magazine/speedloader/revolver/ap = 1,
+		/obj/item/ammo_magazine/speedloader/revolver/ms = 1
+	)
+
+/obj/spawner/simple/bountyheavyrevolver
+	name = "bountyheavyrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial/heavy/bounty = 1,
+		/obj/item/ammo_magazine/speedloader/revolver = 1,
+		/obj/item/ammo_magazine/speedloader/revolver/ms = 1
+	)
+
+/obj/spawner/simple/autogunrevolver
+	name = "autogunrevolver spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/revolver/imperial/heavy/autogun = 1,
+		/obj/item/ammo_magazine/speedloader/militarum = 1,
+		/obj/item/ammo_magazine/speedloader/militarum/ap = 1
+	)
+
+/obj/spawner/simple/boltpistol
+	name = "boltpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/bolt_pistol = 1,
+		/obj/item/ammo_magazine/bolt_pistol_magazine = 1
+	)
+
+/obj/spawner/simple/drusianboltpistol
+	name = "drusianboltpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/pistol/bolt_pistol/drusian = 1,
+		/obj/item/ammo_magazine/bolt_pistol_magazine = 1
+	)
+
+/obj/spawner/simple/laspistol
+	name = "laspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol = 1,
+		/obj/item/cell/device/standard = 1
+	)
+
+/obj/spawner/simple/accatranlaspistol
+	name = "accatranlaspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol/accatran = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/grimlaspistol
+	name = "grimlaspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol/grim = 1,
+		/obj/item/cell/device/high = 1
+	)
+
+/obj/spawner/simple/luciuslaspistol
+	name = "luciuslaspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol/lucius = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/militarumlaspistol
+	name = "militarumlaspistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol/militarum = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/sawnshotgun
+	name = "sawnshotgun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/shotgun/doublebarrel/sawn = 1,
+		/obj/item/ammo_magazine/shotholder = 1
+	)
+
+/obj/spawner/simple/hellpistol
+	name = "hellpistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/laspistol/hellpistol = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/plasmapistol
+	name = "plasmapistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma/pistol = 1
+	)
+
+/obj/spawner/simple/archeotechplasmapistol
+	name = "archeotechplasmapistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma/pistol/archeotech = 1
+	)
+
+/obj/spawner/simple/mechanicusplasmapistol
+	name = "mechanicusplasmapistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma/pistol/mechanicus = 1
+	)
+
+/obj/spawner/simple/xenosplasmapistol
+	name = "xenosplasmapistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma/pistol/xenos = 1
+	)
+
+/obj/spawner/simple/chaosplasmapistol
+	name = "chaosplasmapistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma/pistol/chaos = 1
+	)
+
+/obj/spawner/simple/taupulsepistol
+	name = "taupulsepistol spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/tau/pulsepistol = 1
+	)
+
+/obj/spawner/simple/autogun
+	name = "autogun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/autogun = 1,
+		/obj/item/ammo_magazine/autogun = 1
+	)
+
+/obj/spawner/simple/kriegautogun
+	name = "kriegautogun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/autogun/krieg = 1,
+		/obj/item/ammo_magazine/heavy/ap = 1
+	)
+
+/obj/spawner/simple/valhallaautogun
+	name = "valhallaautogun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/autogun/valhalla = 1,
+		/obj/item/ammo_magazine/autogun/ms = 1
+	)
+
+/obj/spawner/simple/a80autogun
+	name = "a80autogun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/autogun/a80 = 1,
+		/obj/item/ammo_magazine/autogun = 1
+	)
+
+/obj/spawner/simple/stubberautogun
+	name = "stubberautogun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/autogun/stubber = 1,
+		/obj/item/ammo_magazine/autogunheavy = 1
+	)
+
+/obj/spawner/simple/slugrifle
+	name = "slugrifle spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/slugrifle = 1,
+		/obj/item/ammo_magazine/heavy = 1
+	)
+
+/obj/spawner/simple/agrislugrifle
+	name = "agrislugrifle spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/slugrifle/agri = 1,
+		/obj/item/ammo_magazine/magnum/ms = 1
+	)
+
+/obj/spawner/simple/scipioslugrifle
+	name = "scipioslugrifle spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/slugrifle/scipio = 1,
+		/obj/item/ammo_magazine/pistol/small/ap = 1
+	)
+
+/obj/spawner/simple/lockebolter
+	name = "lockebolter spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/boltrifle/lockebolter = 1,
+		/obj/item/ammo_magazine/bolt_rifle_magazine = 1
+	)
+
+/obj/spawner/simple/drusianlockebolter
+	name = "drusianlockebolter spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/automatic/boltrifle/lockebolter/drusian = 1,
+		/obj/item/ammo_magazine/bolt_rifle_magazine = 1
+	)
+
+/obj/spawner/simple/doublebarrelshotgun
+	name = "doublebarrelshotgun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/shotgun/doublebarrel = 1,
+		/obj/item/ammo_magazine/shotholder/ms = 1
+	)
+
+/obj/spawner/simple/voxlegisshotgun
+	name = "voxlegisshotgun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/shotgun/pump/voxlegis = 1,
+		/obj/item/ammo_magazine/shotholder = 1
+	)
+
+/obj/spawner/simple/magraveshotgun
+	name = "magraveshotgun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/shotgun/pump/voxlegis/magrave = 1,
+		/obj/item/ammo_magazine/shotholder = 1
+	)
+
+/obj/spawner/simple/sawnshotgun
+	name = "sawnshotgun spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/shotgun/pump/voxlegis/sawn = 1,
+		/obj/item/ammo_magazine/shotholder/flechette = 1
+	)
+
+/obj/spawner/simple/imperialsniper
+	name = "imperialsniper spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/heavysniper/boltaction/imperial = 1,
+		/obj/item/ammo_magazine/speedloader/clip/stub = 1
+	)
+
+/obj/spawner/simple/cruciblesniper
+	name = "cruciblesniper spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/heavysniper/boltaction/imperial/crucible = 1,
+		/obj/item/ammo_magazine/speedloader/clip/stub/ms = 1
+	)
+
+/obj/spawner/simple/triangongsniper
+	name = "triangongsniper spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/heavysniper/boltaction/imperial/triangong = 1,
+		/obj/item/ammo_magazine/speedloader/clip/stub/ap = 1
+	)
+
+/obj/spawner/simple/throwersniper
+	name = "throwersniper spawner"
+	to_spawn = list(
+		/obj/item/gun/projectile/heavysniper/boltaction/imperial/thrower = 1,
+		/obj/item/ammo_magazine/speedloader/clip/sniper/xenos = 1,
+		/obj/item/ammo_magazine/speedloader/clip/sniper/xenos = 1
+	)
+
+/obj/spawner/simple/lasgun
+	name = "lasgun spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun = 1,
+		/obj/item/cell/device/high = 1
+	)
+
+/obj/spawner/simple/kantrael
+	name = "kantrael spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/kantrael = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/accatran
+	name = "accatran spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/accatran = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/lucius
+	name = "lucius spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/lucius = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/catachan
+	name = "catachan spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/catachan = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/triplex
+	name = "triplex spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/triplex = 1,
+		/obj/item/cell/device/high/laspack = 1
+	)
+
+/obj/spawner/simple/hotshot
+	name = "hotshot spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/hotshot = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/krieg
+	name = "krieg spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/hotshot/krieg = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/masterwork
+	name = "masterwork spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/hotshot/masterwork = 1,
+		/obj/item/cell/device/high/laspack/hotshot = 1
+	)
+
+/obj/spawner/simple/volkite
+	name = "volkite spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/lasgun/hotshot/volkite = 1,
+		/obj/item/cell/device/high/mechanicus = 1
+	)
+
+/obj/spawner/simple/pulserifle
+	name = "pulserifle spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/tau/pulserifle = 1,
+		/obj/item/cell/device/high/xenos = 1
+	)
+
+/obj/spawner/simple/railgun
+	name = "railgun spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/tau/railgun = 1,
+		/obj/item/cell/device/high/xenos = 1
+	)
+
+/obj/spawner/simple/plasma
+	name = "plasma spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/plasma = 1,
+		/obj/item/cell/device/high/mechanicus = 1
+	)
+
+/obj/spawner/simple/meltagun
+	name = "meltagun spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/meltagun = 1,
+		/obj/item/cell/device/high/mechanicus = 1
+	)
+
+/obj/spawner/simple/multi
+	name = "multi spawner"
+	to_spawn = list(
+		/obj/item/gun/energy/meltagun/multi = 1
+	)
+
+/obj/spawner/simple/zealot
+	name = "zealot spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/zealot = 1
+	)
+
+/obj/spawner/simple/mordian
+	name = "mordian spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/mordian = 1,
+		/obj/item/clothing/accessory/leg_guards/flak = 1
+	)
+
+/obj/spawner/simple/cadianconscript
+	name = "cadianconscript spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/conscript = 1,
+		/obj/item/clothing/accessory/leg_guards/flak = 1,
+		/obj/item/clothing/head/helmet/flak/conscript = 1
+	)
+
+/obj/spawner/simple/bountyhunter
+	name = "bountyhunter spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/bountyhunter = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/bountyhead = 1
+	)
+
+/obj/spawner/simple/bondsman
+	name = "bondsman spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman = 1
+	)
+
+/obj/spawner/simple/medicae
+	name = "medicae spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/medicae = 1,
+		/obj/item/clothing/head/helmet/pilgrimcap/medicae = 1
+	)
+
+/obj/spawner/simple/cuirass
+	name = "cuirass spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/cuirass = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hauberk = 1
+	)
+
+/obj/spawner/simple/breastplate
+	name = "breastplate spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/breastplate = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/metalvisor = 1
+	)
+
+/obj/spawner/simple/hauberkheavy
+	name = "hauberkheavy spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/hauberkheavy = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hauberk = 1
+	)
+
+/obj/spawner/simple/fullplate
+	name = "fullplate spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/fullplate = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/alt = 1
+	)
+
+/obj/spawner/simple/heavyplate
+	name = "heavyplate spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/heavyplate = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm = 1
+	)
+
+/obj/spawner/simple/holyplate
+	name = "holyplate spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/holyplate = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/hero = 1
+	)
+
+/obj/spawner/simple/holyplatebrigandine
+	name = "holyplatebrigandine spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal/holyplate/brigandine = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/zealot = 1
+	)
+
+/obj/spawner/simple/siege
+	name = "siege spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/feudal = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/siege = 1
+	)
+
+/obj/spawner/simple/tribal
+	name = "tribal spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/tribal = 1
+	)
+
+/obj/spawner/simple/tribalplate
+	name = "tribalplate spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/tribal/plate = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/hevhelm/bone = 1
+	)
+
+/obj/spawner/simple/hiver
+	name = "hiver spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver = 1,
+		/obj/item/clothing/suit/armor/grim/storage/hooded/mechanicus/bondsman = 1
+	)
+
+/obj/spawner/simple/hiverleather
+	name = "hiverleather spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/leather = 1
+	)
+
+/obj/spawner/simple/hiverleatherjacket
+	name = "hiverleatherjacket spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/leatherjacket = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm = 1
+	)
+
+/obj/spawner/simple/hiverslumcoat
+	name = "hiverslumcoat spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/slumcoat = 1,
+		/obj/item/clothing/head/helmet/pilgrimcap = 1
+	)
+
+/obj/spawner/simple/hiversmuggler
+	name = "hiversmuggler spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/smuggler = 1
+	)
+
+/obj/spawner/simple/hivertrenchcoat
+	name = "hivertrenchcoat spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/trenchcoat = 1
+	)
+
+/obj/spawner/simple/hiverscum
+	name = "hiverscum spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/scum = 1
+	)
+
+/obj/spawner/simple/hivercarapace
+	name = "hivercarapace spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/hiver/carapace = 1
+	)
+
+/obj/spawner/simple/scrapforged
+	name = "scrapforged spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy = 1
+	)
+
+/obj/spawner/simple/scrapduster
+	name = "scrapduster spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/duster = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/metal = 1
+	)
+
+/obj/spawner/simple/scrapflakcuirass
+	name = "scrapflakcuirass spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/flakcuirass = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak = 1
+	)
+
+/obj/spawner/simple/scrapheavyflak
+	name = "scrapheavyflak spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/heavyflak = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak = 1
+	)
+
+/obj/spawner/simple/armoredtrench
+	name = "armoredtrench spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/armoredtrench = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/metalheavy = 1
+	)
+
+/obj/spawner/simple/heavyflak
+	name = "heavyflak spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/merc/heavyflak = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger = 1
+	)
+
+/obj/spawner/simple/ghillieflak
+	name = "ghillieflak spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/ghillieflak = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/foxhelm = 1
+	)
+
+/obj/spawner/simple/cadianheavy
+	name = "cadianheavy spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/heavy = 1,
+		/obj/item/clothing/head/helmet/flak/carapace = 1
+	)
+
+/obj/spawner/simple/krieger
+	name = "krieger spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/krieger = 1,
+		/obj/item/clothing/head/helmet/flak/krieg = 1
+	)
+
+/obj/spawner/simple/maccabian
+	name = "maccabian spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/maccabian = 1,
+		/obj/item/clothing/head/helmet/flak/krieg = 1
+	)
+
+/obj/spawner/simple/enforcer
+	name = "enforcer spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/enforcer2 = 1,
+		/obj/item/clothing/head/helmet/enforcer = 1
+	)
+
+/obj/spawner/simple/scrapcarapace
+	name = "scrapcarapace spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/carapace = 1
+	)
+
+/obj/spawner/simple/scrapcarapace2
+	name = "scrapcarapace2 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/carapace2 = 1
+	)
+
+/obj/spawner/simple/scrapcarapace3
+	name = "scrapcarapace3 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/carapace3 = 1
+	)
+
+/obj/spawner/simple/scrapcuirass
+	name = "scrapcuirass spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/carapacecuirass = 1
+	)
+
+/obj/spawner/simple/scrapranger
+	name = "scrapranger spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/ranger = 1
+	)
+
+/obj/spawner/simple/scrapranger2
+	name = "scrapranger2 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/ranger2 = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger/alt = 1
+	)
+
+/obj/spawner/simple/scrapranger3
+	name = "scrapranger3 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/scrapforged/ranger3 = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger = 1
+	)
+
+/obj/spawner/simple/ghillieflak
+	name = "ghillieflak spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/ghillieflak = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/foxhelm = 1
+	)
+
+/obj/spawner/simple/superrare1
+	name = "superrare1 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/agent = 1,
+		/obj/item/clothing/head/helmet/inquisition/acolyte = 1
+	)
+
+/obj/spawner/simple/superrare2
+	name = "superrare2 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/greypa = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/poweredhelm = 1
+	)
+
+/obj/spawner/simple/superrare3
+	name = "superrare3 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/ancientpowerarmor = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/poweredhelm = 1
+	)
+
+/obj/spawner/simple/superrare4
+	name = "superrare4 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/renegadepowerarmour = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/flak/ranger/alt = 1
+	)
+
+/obj/spawner/simple/superrare5
+	name = "superrare5 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/seolarmor = 1,
+		/obj/item/clothing/head/helmet/pilgrimhelm/xenos = 1
+	)
+
+/obj/spawner/simple/superrare5a
+	name = "superrare5a spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/seolsuit = 1
+	)
+
+/obj/spawner/simple/superrare6
+	name = "superrare6 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/conscript/pdf = 1,
+		/obj/item/clothing/head/helmet/flak/conscript/pdf = 1
+	)
+
+/obj/spawner/simple/superrare7
+	name = "superrare7 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/conscript/heavy = 1,
+		/obj/item/clothing/head/helmet/flak/conscript/pdf/heavy = 1
+	)
+
+/obj/spawner/simple/superrare8
+	name = "superrare8 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/heavy = 1,
+		/obj/item/clothing/head/helmet/flak = 1
+	)
+
+/obj/spawner/simple/superrare9
+	name = "superrare9 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/krieger = 1,
+		/obj/item/clothing/head/helmet/flak/krieg = 1
+	)
+
+/obj/spawner/simple/superrare10
+	name = "superrare10 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/krieger/grenadier = 1,
+		/obj/item/clothing/head/helmet/flak/krieg/grenadier = 1
+	)
+
+/obj/spawner/simple/superrare11
+	name = "superrare11 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/mordian = 1,
+		/obj/item/clothing/head/helmet/guardcap/mordian = 1
+	)
+
+/obj/spawner/simple/superrare12
+	name = "superrare12 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/maccabian = 1,
+		/obj/item/clothing/head/helmet/flak/maccabian = 1
+	)
+
+/obj/spawner/simple/superrare13
+	name = "superrare13 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/stormtrooper = 1,
+		/obj/item/clothing/head/helmet/flak/tempestus = 1
+	)
+
+/obj/spawner/simple/superrare14
+	name = "superrare14 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/kasrkin = 1,
+		/obj/item/clothing/head/helmet/flak/kasrkin = 1
+	)
+
+/obj/spawner/simple/superrare15
+	name = "superrare15 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/grim/cadian/officer_formal = 1,
+		/obj/item/clothing/head/helmet/guardcap/sergeant = 1
+	)
+
+/obj/spawner/simple/superrare16
+	name = "superrare16 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/sacredrosepower = 1,
+		/obj/item/clothing/head/helmet/sisterofbattle = 1
+	)
+
+/obj/spawner/simple/superrare17
+	name = "superrare17 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/sacredrosepower = 1,
+		/obj/item/clothing/head/helmet/sisterofbattle = 1
+	)
+
+/obj/spawner/simple/superrare18
+	name = "superrare18 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/bloodyrosepower = 1,
+		/obj/item/clothing/head/helmet/sisterofbattle/brsister = 1
+	)
+
+/obj/spawner/simple/superrare19
+	name = "superrare19 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/martyredpower = 1,
+		/obj/item/clothing/head/helmet/sisterofbattle/mlsister = 1
+	)
+
+/obj/spawner/simple/superrare20
+	name = "superrare20 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/repentia = 1,
+		/obj/item/clothing/head/helmet/sisterofbattle/repentia = 1
+	)
+
+/obj/spawner/simple/superrare21
+	name = "superrare21 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/novitae = 1,
+		/obj/item/clothing/head/helmet/pilgrimcap/hospitallerhelm = 1
+	)
+
+/obj/spawner/simple/superrare22
+	name = "superrare22 spawner"
+	to_spawn = list(
+		/obj/item/clothing/suit/armor/sister/hospitaller = 1,
+		/obj/item/clothing/head/helmet/pilgrimcap/hospitallerhelm = 1
+	)

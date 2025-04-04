@@ -123,7 +123,6 @@
 	name = "NEEDED FOR SUIT TO WORK."
 	desc = "IF YOU SEE THIS REPORT THIS TO DEVS"
 	var/can_toggle = 1
-	var/is_toggled = 1
 
 /obj/item/clothing/suit/armor/astartes/apothecary/bloodangel
 	name = "Astartes Mark VII Power Armour"
@@ -162,11 +161,10 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You activate the chainsaw on your narthecium, getting ready to cut through armor and bone.")
-		usr.put_in_hands(new /obj/item/melee/chain/pcsword/narthecium/apot(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+	to_chat(usr,"You activate the chainsaw on your narthecium, getting ready to cut through armor and bone.")
+	usr.put_in_hands(new /obj/item/melee/chain/pcsword/narthecium/apot(usr))
 
 /obj/item/melee/chain/pcsword/narthecium/apot
 	name = "Apothecary's Narthecium"
@@ -203,11 +201,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You pull out your electro paddles and get ready to shock!")
-		usr.put_in_hands(new /obj/item/shockpaddles/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You pull out your electro paddles and get ready to shock!")
+	usr.put_in_hands(new /obj/item/shockpaddles/narthecium(usr))
 
 /obj/item/shockpaddles/narthecium
 	name = "narthecium electro-paddles"
@@ -234,11 +232,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You grab a small perfurating device from your gloves.")
-		usr.put_in_hands(new /obj/item/circular_saw/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You grab a small perfurating device from your gloves.")
+	usr.put_in_hands(new /obj/item/circular_saw/narthecium(usr))
 
 /obj/item/circular_saw/narthecium
 	name = "Intergrated bone saw"
@@ -256,11 +254,12 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You call upon the machine spirit of the narthecium to give you it's integrated fixovein supply.")
-		usr.put_in_hands(new /obj/item/FixOVein/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You call upon the machine spirit of the narthecium to give you it's integrated fixovein supply.")
+	usr.put_in_hands(new /obj/item/FixOVein/narthecium(usr))
+
 
 
 /obj/item/FixOVein/narthecium
@@ -279,11 +278,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You pressing the bonegel dispenser button on your narthecium, before noticing it doesn't work, instead, it opens a small hole with a bone gel thingy.")
-		usr.put_in_hands(new /obj/item/bonegel/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You pressing the bonegel dispenser button on your narthecium, before noticing it doesn't work, instead, it opens a small hole with a bone gel thingy.")
+	usr.put_in_hands(new /obj/item/bonegel/narthecium(usr))
 
 
 /obj/item/bonegel/narthecium
@@ -303,11 +302,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You activate the integrated bone setting features of the narthecium, its painful and dizzying for a moment, but you feel more concentrated as a bone setter is seemingly materialized in your hands.")
-		usr.put_in_hands(new /obj/item/bonesetter/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You activate the integrated bone setting features of the narthecium, its painful and dizzying for a moment, but you feel more concentrated as a bone setter is seemingly materialized in your hands.")
+	usr.put_in_hands(new /obj/item/bonesetter/narthecium(usr))
 
 
 /obj/item/bonesetter/narthecium
@@ -326,11 +325,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You grab the duct taped scalpel on the narthecium.")
-		usr.put_in_hands(new /obj/item/scalpel/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You grab the duct taped scalpel on the narthecium.")
+	usr.put_in_hands(new /obj/item/scalpel/narthecium(usr))
 
 /obj/item/scalpel/narthecium
 	name = "Duct Taped Scalpel"
@@ -349,11 +348,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You activate and pull out a servo cautery from the holy narthecium.")
-		usr.put_in_hands(new /obj/item/cautery/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You activate and pull out a servo cautery from the holy narthecium.")
+	usr.put_in_hands(new /obj/item/cautery/narthecium(usr))
 
 /obj/item/cautery/narthecium
 	name = "Servo-Cautery"
@@ -371,11 +370,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You pull out servo hemostats from your narthecium and prepare to activate them.")
-		usr.put_in_hands(new /obj/item/hemostat/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You pull out servo hemostats from your narthecium and prepare to activate them.")
+	usr.put_in_hands(new /obj/item/hemostat/narthecium(usr))
 
 /obj/item/hemostat/narthecium
 	name = "Servo-Hemostat"
@@ -394,11 +393,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You SEIZE the retractor on your narthecium from it's duct tape restraints.")
-		usr.put_in_hands(new /obj/item/retractor/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You SEIZE the retractor on your narthecium from it's duct tape restraints.")
+	usr.put_in_hands(new /obj/item/retractor/narthecium(usr))
 
 /obj/item/retractor/narthecium
 	name = "Duct Taped Retractor"
@@ -416,11 +415,11 @@
 	if(!can_toggle)
 		to_chat(usr,"This tool cannot be toggled!")
 		return
-		src.is_toggled = 1
-	else
-		to_chat(usr,"You activate the integrated incision management systems from your gloves, preparing them to start a incision.")
-		usr.put_in_hands(new /obj/item/scalpel/manager/narthecium(usr))
-		src.is_toggled = 2
+	if (!usr.has_free_hand())
+		to_chat(usr, "You have no hands free to do that!")
+		return
+	to_chat(usr,"You activate the integrated incision management systems from your gloves, preparing them to start a incision.")
+	usr.put_in_hands(new /obj/item/scalpel/manager/narthecium(usr))
 
 /obj/item/scalpel/manager/narthecium
 	name = "Integrated Incision Management System"
@@ -481,7 +480,7 @@
 	. = ..()
 
 
-/obj/item/clothing/suit/armor/astartes/terminator/shielded/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/suit/armor/astartes/terminator/shielded/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(istype(damage_source, /obj/item/projectile))
 		if(shield_count > 0)
 			var/obj/item/projectile/P = damage_source

@@ -505,8 +505,6 @@
 "bj" = (
 /obj/structure/closet/crate/plastic,
 /obj/random/action_figure,
-/obj/random/loot,
-/obj/random/loot,
 /obj/random/smokes,
 /obj/random/smokes,
 /obj/floor_decal/industrial/warning{
@@ -698,7 +696,6 @@
 /obj/structure/safe/floor,
 /obj/random/contraband,
 /obj/random/contraband,
-/obj/random/loot,
 /obj/random/loot/gunbundle,
 /obj/random/cash,
 /obj/random/cash,

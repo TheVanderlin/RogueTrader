@@ -8,7 +8,6 @@
 /turf/template_noop,
 /area/template_noop)
 "d" = (
-/obj/random/loot,
 /obj/random/junk,
 /obj/landmark/clear,
 /turf/template_noop,
@@ -56,7 +55,6 @@
 /turf/template_noop,
 /area/template_noop)
 "s" = (
-/obj/random/loot,
 /obj/landmark/clear,
 /turf/template_noop,
 /area/template_noop)

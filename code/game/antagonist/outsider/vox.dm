@@ -107,7 +107,6 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 		"Arkmade Hardsuit - 8" = list(8, /obj/item/rig/vox),
 		"Makeshift Armored Vest - 1" = list(1, /obj/item/clothing/suit/armor/vox_scrap),
 		"Request medical supplies from Shoal - 1" = list(1, /obj/random/firstaid),
-		"Request equipment from Shoal - 1" = list(1, /obj/random/loot),
 		"Protein Source - 1" = list(1, /mob/living/simple_animal/passive/meatbeast)
 		)
 
@@ -217,7 +216,6 @@ GLOBAL_LIST_EMPTY(vox_artifact_spawners)
 				to_chat(user, SPAN_NOTICE("You are unable to learn anything useful about [src.name]."))
 
 /obj/item/voxartifact/proc/activate()
-	new /obj/random/loot(get_turf(src))
 	new /obj/item/bluecrystal(get_turf(src))
 	qdel(src)
 

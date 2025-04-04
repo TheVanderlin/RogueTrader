@@ -1,6 +1,6 @@
 /*
 * These calls could easily be setup to be a bunch of call()() with relevant procs and predicates but performance is a concern.
-* BYOND is also a bit inflexible, as some predicates are of the sort /proc/name(host), others host.proc_name(), and some even do host.proc_name(parameter).
+* BYOND is also a bit inflexible, as some predicates are of the sort name(host), others host.proc_name(), and some even do host.proc_name(parameter).
 * Nothing that cannot be worked around, but it'd be a little messy. I miss C# lambdas...
 */
 

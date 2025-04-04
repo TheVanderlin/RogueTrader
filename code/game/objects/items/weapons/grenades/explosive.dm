@@ -45,7 +45,7 @@
 		msg_admin_attack("[user.name] ([user.ckey]) primed \a [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
 	active = TRUE
 	playsound(loc, arm_sound, 75, 0, -3)
-	addtimer(new Callback(src, .proc/detonate, user), det_time)
+	addtimer(new Callback(src, PROC_REF(detonate), user), det_time)
 
 /obj/item/grenade/frag/detonate(mob/living/user)
 	..()

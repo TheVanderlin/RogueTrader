@@ -272,9 +272,9 @@
 					if(!O.CanPass(src, loc))
 						new_spread_amt = 0
 						break
-			addtimer(CALLBACK(src, .proc/make_more_fire,T, fire_lvl, burn_lvl, f_color, new_spread_amt, ~canSpreadDir), 0) //Do not put spawns in recursive things.
+			addtimer(CALLBACK(src, PROC_REF(make_more_fire),T, fire_lvl, burn_lvl, f_color, new_spread_amt, ~canSpreadDir), 0) //Do not put spawns in recursive things.
 
-/obj/flamer_fire/proc/make_more_fire(var/T, var/f_level, var/b_level, var/fcolor, var/new_spread, var/blockedDirs)
+/obj/flamer_fire/proc/make_more_fire(T, f_level, b_level, fcolor, new_spread, blockedDirs)
 	new /obj/flamer_fire(T, f_level, b_level, fcolor, new_spread, blockedDirs)
 
 /obj/flamer_fire/Destroy()
@@ -355,7 +355,7 @@
 	//range =  6 //extremely close ranged, normal vision is 8 but technically 7 if you don't count your own tile.
 
 
-/obj/item/projectile/energy/phosphor/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/energy/phosphor/on_hit(atom/target, blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(!istype(H.wear_suit, /obj/item/clothing/suit/armor/seolsuit))
@@ -383,7 +383,7 @@
 	armor_penetration = 60
 	damage_type = DAMAGE_BURN
 
-/obj/item/projectile/archeotech/explosion/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/archeotech/explosion/on_hit(atom/target, blocked = 0)
 	explosion(target, 3, EX_ACT_HEAVY)
 	..()
 
@@ -396,7 +396,7 @@
 	damage_type = DAMAGE_BURN
 
 
-/obj/item/projectile/archeotech/anticausality/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/archeotech/anticausality/on_hit(atom/target, blocked = 0)
 	if(ismob(target))
 		var/mobloc = get_turf(target.loc)
 		var/atom/movable/fake_overlay/animation
@@ -436,7 +436,7 @@
 	armor_penetration = 60
 	damage_type = DAMAGE_BURN
 
-/obj/item/projectile/archeotech/capture/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/archeotech/capture/on_hit(atom/target, blocked = 0)
 	if(istype(target, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = target
 		var/obj/item/handcuffs/archeotech/cuffs = new()
@@ -455,7 +455,7 @@
 	desc = "Strange beams of energy which restrain your hands."
 	breakout_time = 300 //30 seconds
 
-/obj/item/handcuffs/archeotech/dropped(var/mob/user)
+/obj/item/handcuffs/archeotech/dropped(mob/user)
 	..()
 	qdel(src)
 
@@ -467,7 +467,7 @@
 	armor_penetration = 60
 	damage_type = DAMAGE_BURN
 
-/obj/item/projectile/archeotech/stun/on_hit(var/atom/target, var/blocked = 0)
+/obj/item/projectile/archeotech/stun/on_hit(atom/target, blocked = 0)
 	if(istype(target, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = target
 		H.Weaken(15)

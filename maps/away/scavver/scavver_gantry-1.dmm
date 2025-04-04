@@ -691,7 +691,6 @@
 /area/scavver/calypso)
 "kK" = (
 /obj/floor_decal/corner/blue/mono,
-/obj/random/loot,
 /obj/structure/table/steel_reinforced,
 /obj/item/device/radio/intercom/map_preset/scavver{
 	default_hailing = 1;
@@ -763,7 +762,6 @@
 	dir = 8;
 	icon_state = "railing0-1"
 	},
-/obj/random/loot,
 /obj/catwalk_plated/dark,
 /turf/simulated/floor,
 /area/space)
@@ -1886,7 +1884,6 @@
 	pixel_y = 20
 	},
 /obj/decal/cleanable/dirt,
-/obj/random/loot,
 /turf/simulated/floor/tiled/freezer,
 /area/scavver/yachtdown)
 "FM" = (
@@ -2141,7 +2138,6 @@
 /turf/simulated/floor,
 /area/scavver/gantry/down1)
 "KL" = (
-/obj/random/loot,
 /obj/structure/railing/mapped,
 /obj/catwalk_plated/dark,
 /turf/simulated/floor,

@@ -4593,7 +4593,6 @@
 /area/errant_pisces/cryo)
 "lA" = (
 /obj/structure/closet,
-/obj/random/loot,
 /obj/random/soap,
 /turf/simulated/floor/warhammer/ceramic/blackstone,
 /area/errant_pisces/cryo)

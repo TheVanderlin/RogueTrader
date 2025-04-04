@@ -3831,11 +3831,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/meatstation/storage)
-"jY" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "jZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/reinforced{
@@ -35875,7 +35870,7 @@ aa
 aa
 aa
 be
-jY
+be
 be
 aa
 aa
@@ -36888,7 +36883,7 @@ aa
 fc
 bd
 be
-jY
+be
 aa
 aa
 aa

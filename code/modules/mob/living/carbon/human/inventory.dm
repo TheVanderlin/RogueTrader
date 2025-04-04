@@ -69,6 +69,19 @@ This saves us from having to call add_fingerprint() any time something is put in
 	W.add_fingerprint(src)
 	return 1
 
+/mob/living/carbon/human/has_free_hand()
+	if (!l_hand)
+		var/obj/item/organ/external/hand = organs_by_name["l_hand"]
+		if (!hand || !hand.is_usable())
+			return FALSE
+		return TRUE
+	if (!r_hand)
+		var/obj/item/organ/external/hand = organs_by_name["r_hand"]
+		if (!hand || !hand.is_usable())
+			return FALSE
+		return TRUE
+	return FALSE
+
 /mob/living/carbon/human/proc/has_organ(name)
 	var/obj/item/organ/external/O = organs_by_name[name]
 	return (O && !O.is_stump())

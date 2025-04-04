@@ -89,7 +89,7 @@
 	else if(cameras && (last_camera_area != alarm_area()))
 		cameras = null
 
-	// The list of cameras is also reset by /proc/invalidateCameraCache()
+	// The list of cameras is also reset by invalidateCameraCache()
 	if(!cameras)
 		cameras = origin ? origin.get_alarm_cameras() : last_area.get_alarm_cameras()
 

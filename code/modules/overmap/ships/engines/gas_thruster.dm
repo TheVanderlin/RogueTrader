@@ -187,7 +187,7 @@
 	return round(sqrt(propellant.get_mass() * used_part * air_contents.return_pressure()/100),0.1)
 
 /obj/machinery/atmospherics/unary/engine/RefreshParts()
-	..
+	..()
 	// allows them to upgrade the max limit of fuel intake (which only gives diminishing returns) for increase in max thrust but massive reduction in fuel economy
 	var/bin_upgrade = 0.5 * clamp(total_component_rating_of_type(/obj/item/stock_parts/matter_bin), 0, 0.6)//5 litre per rank
 	moles_per_burn = bin_upgrade ? (initial(moles_per_burn) + bin_upgrade) * 0.4 : 0.5 * 0.4 // Penalty missing part: 10% fuel use, no thrust, apply 60% reduction

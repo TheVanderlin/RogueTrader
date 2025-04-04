@@ -3519,9 +3519,6 @@
 /area/ship/scrap/hidden)
 "gX" = (
 /obj/structure/closet/crate,
-/obj/random/loot,
-/obj/random/loot,
-/obj/random/loot,
 /obj/random/loot/gunbundle,
 /obj/random/loot/gunbundle,
 /turf/simulated/floor/warhammer/plating,
@@ -5043,8 +5040,6 @@
 /area/ship/scrap/maintenance/engine/port)
 "Mp" = (
 /obj/structure/closet/crate,
-/obj/random/loot,
-/obj/random/loot,
 /obj/item/disk/tech_disk,
 /obj/item/disk/tech_disk,
 /obj/item/disk/design_disk,

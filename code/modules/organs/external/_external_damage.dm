@@ -324,7 +324,7 @@
 
 // This returns a percentage-based "damage reduction" for skill levels.
 // If the returned value is R, then we multiply final armor by (1 - R).
-proc/get_combat_skill_reduction(mob/user)
+/proc/get_combat_skill_reduction(mob/user)
 	if(!user)
 		return 0
 

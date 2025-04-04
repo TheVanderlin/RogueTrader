@@ -191,8 +191,6 @@
 /area/map_template/deepmaint)
 "aO" = (
 /obj/structure/table/woodentable,
-/obj/random/loot,
-/obj/random/loot,
 /turf/simulated/floor/carpet/red,
 /area/map_template/deepmaint)
 "aP" = (
@@ -403,7 +401,6 @@
 "bD" = (
 /obj/structure/table/woodentable,
 /obj/random/pack/rare,
-/obj/random/loot,
 /turf/simulated/floor/wood,
 /area/map_template/deepmaint)
 "bE" = (

@@ -17,8 +17,6 @@
 "ah" = (
 /obj/structure/table/rack,
 /obj/random/tech_supply,
-/obj/random/loot,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "ai" = (
@@ -103,7 +101,6 @@
 /area/outpost/abandoned)
 "aC" = (
 /obj/structure/table/glass,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "aD" = (
@@ -229,7 +226,6 @@
 /area/outpost/abandoned)
 "be" = (
 /obj/decal/cleanable/blood,
-/obj/random/loot,
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/abandoned)
 "bf" = (
@@ -249,7 +245,6 @@
 /area/outpost/abandoned)
 "bi" = (
 /obj/structure/table/rack,
-/obj/random/loot,
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/abandoned)
 "bj" = (
@@ -346,7 +341,6 @@
 /area/outpost/abandoned)
 "bG" = (
 /obj/structure/table/steel,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "bI" = (
@@ -406,7 +400,6 @@
 /obj/floor_decal/corner/paleblue/three_quarters{
 	dir = 8
 	},
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "cb" = (
@@ -515,7 +508,6 @@
 /area/outpost/abandoned)
 "cq" = (
 /obj/structure/table/woodentable,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/darkwood,
 /area/outpost/abandoned)
 "cr" = (
@@ -644,7 +636,6 @@
 	dir = 10
 	},
 /obj/decal/cleanable/dirt,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "cY" = (
@@ -765,7 +756,6 @@
 	dir = 10
 	},
 /obj/structure/table/woodentable,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/darkwood,
 /area/outpost/abandoned)
 "dx" = (
@@ -1130,7 +1120,6 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "eP" = (
@@ -1324,7 +1313,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "fB" = (
@@ -1560,7 +1548,6 @@
 /obj/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plating,
 /area/outpost/abandoned)
 "gq" = (
@@ -1593,7 +1580,6 @@
 /area/mine/explored)
 "gv" = (
 /obj/random/closet,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plating,
 /area/outpost/abandoned)
 "gw" = (
@@ -1873,7 +1859,6 @@
 /area/outpost/abandoned)
 "hg" = (
 /obj/structure/closet/crate/trashcart,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plating,
 /area/outpost/abandoned)
 "hh" = (
@@ -1944,7 +1929,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/outpost/abandoned)
 "ht" = (
@@ -2223,7 +2207,6 @@
 "XS" = (
 /obj/floor_decal/spline/fancy/wood,
 /obj/structure/table/woodentable,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/darkwood,
 /area/outpost/abandoned)
 

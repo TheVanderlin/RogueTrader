@@ -149,6 +149,9 @@
 	drop_from_inventory(W)
 	return 0
 
+/mob/proc/has_free_hand()
+	return FALSE
+
 
 /**
  * Checks if a given item or path is in any of the mob's hands or other holding slots.

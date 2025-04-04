@@ -151,7 +151,7 @@
 		pass("All space suit modifiers have unique names.")
 	return 1
 
-// Purpose: /proc/SetupChameleonExtension() attempts to find the best chameleon extension for a given type
+// Purpose: SetupChameleonExtension() attempts to find the best chameleon extension for a given type
 // Having multiple extensions expect the same type can technically lead to inconsistencies between compilations (if the types are moved around, etc.)
 // Can be worked around by, for example, adding a flag that adds/removes a given extension from the list of possible extensions in the proc above
 /datum/unit_test/chameleon_extensions_shall_have_unique_expected_types

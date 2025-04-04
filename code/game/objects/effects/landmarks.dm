@@ -262,7 +262,7 @@
 	icon = 'icons/map_project/fluff_items.dmi'
 	icon_state = "paper3"
 
-/obj/random/exploration/spawn_choices()
+/obj/random/randomchaos/spawn_choices()
 	return list(/mob/living/simple_animal/hostile/daemon/headcrab/infestor = 1,
 				/mob/living/simple_animal/hostile/daemon/minion = 1,
 				/mob/living/simple_animal/hostile/daemon/hulk = 1,
@@ -451,11 +451,11 @@
 				/obj/item/material/twohanded/ravenor/axe/spear/fuscina/adamantine = 1)
 
 /obj/random/loot/swordmelee // need to also make a sword only spawner without traditional melee. then a traditional melee spawner.
-	name = "Heavy Melee"
-	desc = "This is a weapon loot spawner with a high chance of spawning common heavy melee weapons."
-	icon_state = "heavymelee"
+	name = "Sword Melee"
+	desc = "This is a weapon loot spawner with a high chance of spawning sword melee weapons."
+	icon_state = "lightmelee"
 
-/obj/random/loot/heavymelee/spawn_choices()
+/obj/random/loot/swordmelee/spawn_choices()
 	return list(/obj/item/material/twohanded/ravenor/sword/chopper/heavy = 16,
 				/obj/item/material/twohanded/ravenor/sword/chopper/heavy/adamantine = 3,
 				/obj/item/material/twohanded/ravenor/sword/broadsword = 16,
@@ -466,14 +466,13 @@
 				/obj/item/material/twohanded/ravenor/chainsword/eviscerator = 1,
 				/obj/item/material/twohanded/ravenor/chainsword/drusian = 2)
 
-/obj/random/loot/ammo1/New()
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	qdel(src)
-/obj/random/loot/ammo2/New()
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	new /obj/item/ammo_magazine/shotholder(src.loc)
-	qdel(src)
+/obj/spawner/simple/ammo1
+	name = "ammo spawner - 1x magazine"
+	to_spawn = /obj/item/ammo_magazine/shotholder
+
+/obj/spawner/simple/ammo2
+	name = "ammo spawner - 2x magazine"
+	to_spawn = list(/obj/item/ammo_magazine/shotholder = 2)
 
 /obj/random/loot/ammobundle
 	name = "Ammo Bundle"
@@ -481,12 +480,10 @@
 	icon_state = "randomammo"
 
 /obj/random/loot/ammobundle/spawn_choices()
-	// Replace individual items with paths to the `ammoX` spawners
-	var/list/choices = list(
-		/obj/random/loot/ammo1 = 5,
-		/obj/random/loot/ammo2 = 3
+	return list(
+		/obj/spawner/simple/ammo1 = 5,
+		/obj/spawner/simple/ammo2 = 3
 	)
-	return choices
 
 /obj/random/loot/sidearmbundle
 	name = "Sidearm Bundle"
@@ -494,28 +491,27 @@
 	icon_state = "sidearm"
 
 /obj/random/loot/sidearmbundle/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/stubpistol = 10,
-		/obj/landmark/rav/villierspistol = 8,
-		/obj/landmark/rav/talonpistol = 6,
-		/obj/landmark/rav/snubpistol = 6,
-		/obj/landmark/rav/slugpistol = 8,
-		/obj/landmark/rav/oldslugpistol = 4,
-		/obj/landmark/rav/shotgunslugpistol = 3,
-		/obj/landmark/rav/imperialrevolver = 6,
-		/obj/landmark/rav/holdoutrevolver = 3,
-		/obj/landmark/rav/heavyrevolver = 6,
-		/obj/landmark/rav/matebaheavyrevolver = 2,
-		/obj/landmark/rav/autogunrevolver = 1,
-		/obj/landmark/rav/boltpistol = 2,
-		/obj/landmark/rav/laspistol = 4,
-		/obj/landmark/rav/accatranlaspistol = 2,
-		/obj/landmark/rav/grimlaspistol = 3,
-		/obj/landmark/rav/luciuslaspistol = 2,
-		/obj/landmark/rav/militarumlaspistol = 3,
-		/obj/landmark/rav/sawnshotgun = 6
+	return list(
+		/obj/spawner/simple/stubpistol = 10,
+		/obj/spawner/simple/villierspistol = 8,
+		/obj/spawner/simple/talonpistol = 6,
+		/obj/spawner/simple/snubpistol = 6,
+		/obj/spawner/simple/slugpistol = 8,
+		/obj/spawner/simple/oldslugpistol = 4,
+		/obj/spawner/simple/shotgunslugpistol = 3,
+		/obj/spawner/simple/imperialrevolver = 6,
+		/obj/spawner/simple/holdoutrevolver = 3,
+		/obj/spawner/simple/heavyrevolver = 6,
+		/obj/spawner/simple/matebaheavyrevolver = 2,
+		/obj/spawner/simple/autogunrevolver = 1,
+		/obj/spawner/simple/boltpistol = 2,
+		/obj/spawner/simple/laspistol = 4,
+		/obj/spawner/simple/accatranlaspistol = 2,
+		/obj/spawner/simple/grimlaspistol = 3,
+		/obj/spawner/simple/luciuslaspistol = 2,
+		/obj/spawner/simple/militarumlaspistol = 3,
+		/obj/spawner/simple/sawnshotgun = 6
 	)
-	return choices
 
 /obj/random/loot/raresidearmbundle
 	name = "Rare Sidearm Bundle"
@@ -523,27 +519,25 @@
 	icon_state = "sidearm"
 
 /obj/random/loot/raresidearmbundle/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/talonpistol = 4,
-		/obj/landmark/rav/oldslugpistol = 2,
-		/obj/landmark/rav/shotgunslugpistol = 3,
-		/obj/landmark/rav/matebaheavyrevolver = 3,
-		/obj/landmark/rav/autogunrevolver = 2,
-		/obj/landmark/rav/boltpistol = 3,
-		/obj/landmark/rav/drusianboltpistol = 2,
-		/obj/landmark/rav/accatranlaspistol = 3,
-		/obj/landmark/rav/luciuslaspistol = 3,
-		/obj/landmark/rav/sawnshotgun = 6,
-		/obj/landmark/rav/hellpistol = 2,
-		/obj/landmark/rav/plasmapistol = 2,
-		/obj/landmark/rav/archeotechplasmapistol = 1,
-		/obj/landmark/rav/mechanicusplasmapistol = 1,
-		/obj/landmark/rav/xenosplasmapistol = 1,
-		/obj/landmark/rav/chaosplasmapistol = 1,
-		/obj/landmark/rav/taupulsepistol = 4
+	return list(
+		/obj/spawner/simple/talonpistol = 4,
+		/obj/spawner/simple/oldslugpistol = 2,
+		/obj/spawner/simple/shotgunslugpistol = 3,
+		/obj/spawner/simple/matebaheavyrevolver = 3,
+		/obj/spawner/simple/autogunrevolver = 2,
+		/obj/spawner/simple/boltpistol = 3,
+		/obj/spawner/simple/drusianboltpistol = 2,
+		/obj/spawner/simple/accatranlaspistol = 3,
+		/obj/spawner/simple/luciuslaspistol = 3,
+		/obj/spawner/simple/sawnshotgun = 6,
+		/obj/spawner/simple/hellpistol = 2,
+		/obj/spawner/simple/plasmapistol = 2,
+		/obj/spawner/simple/archeotechplasmapistol = 1,
+		/obj/spawner/simple/mechanicusplasmapistol = 1,
+		/obj/spawner/simple/xenosplasmapistol = 1,
+		/obj/spawner/simple/chaosplasmapistol = 1,
+		/obj/spawner/simple/taupulsepistol = 4
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/gunbundle
 	name = "Slug Gun Bundle"
@@ -551,27 +545,25 @@
 	icon_state = "badranged"
 
 /obj/random/loot/gunbundle/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/autogun = 10,
-		/obj/landmark/rav/kriegautogun = 5,
-		/obj/landmark/rav/valhallaautogun = 6,
-		/obj/landmark/rav/a80autogun = 6,
-		/obj/landmark/rav/stubberautogun = 6,
-		/obj/landmark/rav/slugrifle = 6,
-		/obj/landmark/rav/agrislugrifle = 4,
-		/obj/landmark/rav/scipioslugrifle = 4,
-		/obj/landmark/rav/lockebolter = 2,
-		/obj/landmark/rav/doublebarrelshotgun = 4,
-		/obj/landmark/rav/voxlegisshotgun = 4,
-		/obj/landmark/rav/magraveshotgun = 2,
-		/obj/landmark/rav/sawnshotgun = 2,
-		/obj/landmark/rav/imperialsniper = 5,
-		/obj/landmark/rav/cruciblesniper = 2,
+	return list(
+		/obj/spawner/simple/autogun = 10,
+		/obj/spawner/simple/kriegautogun = 5,
+		/obj/spawner/simple/valhallaautogun = 6,
+		/obj/spawner/simple/a80autogun = 6,
+		/obj/spawner/simple/stubberautogun = 6,
+		/obj/spawner/simple/slugrifle = 6,
+		/obj/spawner/simple/agrislugrifle = 4,
+		/obj/spawner/simple/scipioslugrifle = 4,
+		/obj/spawner/simple/lockebolter = 2,
+		/obj/spawner/simple/doublebarrelshotgun = 4,
+		/obj/spawner/simple/voxlegisshotgun = 4,
+		/obj/spawner/simple/magraveshotgun = 2,
+		/obj/spawner/simple/sawnshotgun = 2,
+		/obj/spawner/simple/imperialsniper = 5,
+		/obj/spawner/simple/cruciblesniper = 2,
 		/obj/item/gun/magnetic/railgun = 2,
-		/obj/landmark/rav/triangongsniper = 2,
+		/obj/spawner/simple/triangongsniper = 2,
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 
 /obj/random/loot/raregunslug
@@ -580,19 +572,17 @@
 	icon_state = "badranged"
 
 /obj/random/loot/raregunslug/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/kriegautogun = 7,
-		/obj/landmark/rav/valhallaautogun = 6,
-		/obj/landmark/rav/stubberautogun = 5,
-		/obj/landmark/rav/slugrifle = 8,
-		/obj/landmark/rav/lockebolter = 2,
-		/obj/landmark/rav/drusianlockebolter = 1,
-		/obj/landmark/rav/magraveshotgun = 6,
-		/obj/landmark/rav/cruciblesniper = 4,
-		/obj/landmark/rav/throwersniper = 1,
+	return list(
+		/obj/spawner/simple/kriegautogun = 7,
+		/obj/spawner/simple/valhallaautogun = 6,
+		/obj/spawner/simple/stubberautogun = 5,
+		/obj/spawner/simple/slugrifle = 8,
+		/obj/spawner/simple/lockebolter = 2,
+		/obj/spawner/simple/drusianlockebolter = 1,
+		/obj/spawner/simple/magraveshotgun = 6,
+		/obj/spawner/simple/cruciblesniper = 4,
+		/obj/spawner/simple/throwersniper = 1,
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/lasbundle
 	name = "Las Gun Bundle"
@@ -600,25 +590,23 @@
 	icon_state = "lasgun"
 
 /obj/random/loot/lasbundle/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/lasgun = 9,
-		/obj/landmark/rav/kantrael = 11,
-		/obj/landmark/rav/accatran = 10,
-		/obj/landmark/rav/lucius = 10,
-		/obj/landmark/rav/catachan = 9,
-		/obj/landmark/rav/triplex = 10,
-		/obj/landmark/rav/hotshot = 3,
-		/obj/landmark/rav/krieg = 1,
-		/obj/landmark/rav/masterwork = 1,
-		/obj/landmark/rav/volkite = 1,
-		/obj/landmark/rav/pulserifle = 2,
-		/obj/landmark/rav/railgun = 1, // Tau ion rifle and certain faction rare gear won't ever spawn as loot. As to avoid making unique faction gear feel commonplace.
-		/obj/landmark/rav/plasma = 2,
-		/obj/landmark/rav/meltagun = 1,
-		/obj/landmark/rav/multi = 1
+	return list(
+		/obj/spawner/simple/lasgun = 9,
+		/obj/spawner/simple/kantrael = 11,
+		/obj/spawner/simple/accatran = 10,
+		/obj/spawner/simple/lucius = 10,
+		/obj/spawner/simple/catachan = 9,
+		/obj/spawner/simple/triplex = 10,
+		/obj/spawner/simple/hotshot = 3,
+		/obj/spawner/simple/krieg = 1,
+		/obj/spawner/simple/masterwork = 1,
+		/obj/spawner/simple/volkite = 1,
+		/obj/spawner/simple/pulserifle = 2,
+		/obj/spawner/simple/railgun = 1, // Tau ion rifle and certain faction rare gear won't ever spawn as loot. As to avoid making unique faction gear feel commonplace.
+		/obj/spawner/simple/plasma = 2,
+		/obj/spawner/simple/meltagun = 1,
+		/obj/spawner/simple/multi = 1
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/raregunsenergy
 	name = "Rare Energy Bundle"
@@ -626,22 +614,20 @@
 	icon_state = "lasgun"
 
 /obj/random/loot/raregunsenergy/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/lucius = 6,
-		/obj/landmark/rav/catachan = 4,
-		/obj/landmark/rav/triplex = 2,
-		/obj/landmark/rav/hotshot = 4,
-		/obj/landmark/rav/krieg = 2,
-		/obj/landmark/rav/masterwork = 2,
-		/obj/landmark/rav/volkite = 1,
-		/obj/landmark/rav/pulserifle = 3,
-		/obj/landmark/rav/railgun = 1,
-		/obj/landmark/rav/plasma = 2,
-		/obj/landmark/rav/meltagun = 1,
-		/obj/landmark/rav/multi = 1
+	return list(
+		/obj/spawner/simple/lucius = 6,
+		/obj/spawner/simple/catachan = 4,
+		/obj/spawner/simple/triplex = 2,
+		/obj/spawner/simple/hotshot = 4,
+		/obj/spawner/simple/krieg = 2,
+		/obj/spawner/simple/masterwork = 2,
+		/obj/spawner/simple/volkite = 1,
+		/obj/spawner/simple/pulserifle = 3,
+		/obj/spawner/simple/railgun = 1,
+		/obj/spawner/simple/plasma = 2,
+		/obj/spawner/simple/meltagun = 1,
+		/obj/spawner/simple/multi = 1
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/basicarmorbundle
 	name = "Basic Armor Bundle"
@@ -649,39 +635,37 @@
 	icon_state = "randomarmor"
 
 /obj/random/loot/basicarmorbundle/spawn_choices()
-	var/list/choices = list(
-		/obj/landmark/rav/zealot = 4,
-		/obj/landmark/rav/mordian = 4,
-		/obj/landmark/rav/cadianconscript = 5,
-		/obj/landmark/rav/bountyhunter = 3,
-		/obj/landmark/rav/bondsman = 6,
-		/obj/landmark/rav/medicae = 2,
-		/obj/landmark/rav/cuirass = 2,
-		/obj/landmark/rav/breastplate = 3,
-		/obj/landmark/rav/hauberkheavy = 3,
-		/obj/landmark/rav/fullplate = 2,
-		/obj/landmark/rav/heavyplate = 1,
-		/obj/landmark/rav/holyplate = 1,
-		/obj/landmark/rav/holyplatebrigandine = 1,
-		/obj/landmark/rav/siege = 2,
-		/obj/landmark/rav/tribal = 1,
-		/obj/landmark/rav/tribalplate = 1,
-		/obj/landmark/rav/hiver = 5,
-		/obj/landmark/rav/hiverleather = 4,
-		/obj/landmark/rav/hiverleatherjacket = 4,
-		/obj/landmark/rav/hiverslumcoat = 3,
-		/obj/landmark/rav/hiversmuggler = 3,
-		/obj/landmark/rav/hivertrenchcoat = 3,
-		/obj/landmark/rav/hiverscum = 3,
-		/obj/landmark/rav/hivercarapace = 1,
-		/obj/landmark/rav/scrapforged = 4,
-		/obj/landmark/rav/scrapduster = 2,
-		/obj/landmark/rav/scrapflakcuirass = 1,
-		/obj/landmark/rav/scrapheavyflak = 1,
-		/obj/landmark/rav/armoredtrench = 2
+	return list(
+		/obj/spawner/simple/zealot = 4,
+		/obj/spawner/simple/mordian = 4,
+		/obj/spawner/simple/cadianconscript = 5,
+		/obj/spawner/simple/bountyhunter = 3,
+		/obj/spawner/simple/bondsman = 6,
+		/obj/spawner/simple/medicae = 2,
+		/obj/spawner/simple/cuirass = 2,
+		/obj/spawner/simple/breastplate = 3,
+		/obj/spawner/simple/hauberkheavy = 3,
+		/obj/spawner/simple/fullplate = 2,
+		/obj/spawner/simple/heavyplate = 1,
+		/obj/spawner/simple/holyplate = 1,
+		/obj/spawner/simple/holyplatebrigandine = 1,
+		/obj/spawner/simple/siege = 2,
+		/obj/spawner/simple/tribal = 1,
+		/obj/spawner/simple/tribalplate = 1,
+		/obj/spawner/simple/hiver = 5,
+		/obj/spawner/simple/hiverleather = 4,
+		/obj/spawner/simple/hiverleatherjacket = 4,
+		/obj/spawner/simple/hiverslumcoat = 3,
+		/obj/spawner/simple/hiversmuggler = 3,
+		/obj/spawner/simple/hivertrenchcoat = 3,
+		/obj/spawner/simple/hiverscum = 3,
+		/obj/spawner/simple/hivercarapace = 1,
+		/obj/spawner/simple/scrapforged = 4,
+		/obj/spawner/simple/scrapduster = 2,
+		/obj/spawner/simple/scrapflakcuirass = 1,
+		/obj/spawner/simple/scrapheavyflak = 1,
+		/obj/spawner/simple/armoredtrench = 2
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/rarearmorbundle
 	name = "Rare Armor Bundle"
@@ -689,23 +673,21 @@
 	icon_state = "randomarmor"
 
 /obj/random/loot/rarearmorbundle/spawn_choices()
-	var/list/choices = list(
-	/obj/landmark/rav/heavyflak = 4,
-	/obj/landmark/rav/ghillieflak = 1,
-	/obj/landmark/rav/cadianheavy = 3,
-	/obj/landmark/rav/krieger = 2,
-	/obj/landmark/rav/maccabian = 1,
-	/obj/landmark/rav/enforcer = 1,
-	/obj/landmark/rav/scrapcarapace = 3,
-	/obj/landmark/rav/scrapcarapace2 = 2,
-	/obj/landmark/rav/scrapcarapace3 = 2,
-	/obj/landmark/rav/scrapcuirass = 3,
-	/obj/landmark/rav/scrapranger = 1,
-	/obj/landmark/rav/scrapranger2 = 1,
-	/obj/landmark/rav/scrapranger3 = 1
+	return list(
+	/obj/spawner/simple/heavyflak = 4,
+	/obj/spawner/simple/ghillieflak = 1,
+	/obj/spawner/simple/cadianheavy = 3,
+	/obj/spawner/simple/krieger = 2,
+	/obj/spawner/simple/maccabian = 1,
+	/obj/spawner/simple/enforcer = 1,
+	/obj/spawner/simple/scrapcarapace = 3,
+	/obj/spawner/simple/scrapcarapace2 = 2,
+	/obj/spawner/simple/scrapcarapace3 = 2,
+	/obj/spawner/simple/scrapcuirass = 3,
+	/obj/spawner/simple/scrapranger = 1,
+	/obj/spawner/simple/scrapranger2 = 1,
+	/obj/spawner/simple/scrapranger3 = 1
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/superrarearmor
 	name = "Super Rare Armor Bundle"
@@ -713,33 +695,31 @@
 	icon_state = "randomarmor"
 
 /obj/random/loot/superrarearmor/spawn_choices()
-	var/list/choices = list(
-	/obj/landmark/rav/superrare1 = 4,
-	/obj/landmark/rav/superrare2 = 1,
-	/obj/landmark/rav/superrare3 = 1,
-	/obj/landmark/rav/superrare4 = 1,
-	/obj/landmark/rav/superrare5 = 4,
-	/obj/landmark/rav/superrare5a = 1,
-	/obj/landmark/rav/superrare6 = 4,
-	/obj/landmark/rav/superrare7 = 4,
-	/obj/landmark/rav/superrare8 = 3,
-	/obj/landmark/rav/superrare9 = 3,
-	/obj/landmark/rav/superrare10 = 1,
-	/obj/landmark/rav/superrare11 = 3,
-	/obj/landmark/rav/superrare12 = 1,
-	/obj/landmark/rav/superrare13 = 1,
-	/obj/landmark/rav/superrare14 = 1,
-	/obj/landmark/rav/superrare15 = 4,
-	/obj/landmark/rav/superrare16 = 1,
-	/obj/landmark/rav/superrare17 = 1,
-	/obj/landmark/rav/superrare18 = 1,
-	/obj/landmark/rav/superrare19 = 1,
-	/obj/landmark/rav/superrare20 = 3,
-	/obj/landmark/rav/superrare21 = 3,
-	/obj/landmark/rav/superrare22 = 3,
+	return list(
+	/obj/spawner/simple/superrare1 = 4,
+	/obj/spawner/simple/superrare2 = 1,
+	/obj/spawner/simple/superrare3 = 1,
+	/obj/spawner/simple/superrare4 = 1,
+	/obj/spawner/simple/superrare5 = 4,
+	/obj/spawner/simple/superrare5a = 1,
+	/obj/spawner/simple/superrare6 = 4,
+	/obj/spawner/simple/superrare7 = 4,
+	/obj/spawner/simple/superrare8 = 3,
+	/obj/spawner/simple/superrare9 = 3,
+	/obj/spawner/simple/superrare10 = 1,
+	/obj/spawner/simple/superrare11 = 3,
+	/obj/spawner/simple/superrare12 = 1,
+	/obj/spawner/simple/superrare13 = 1,
+	/obj/spawner/simple/superrare14 = 1,
+	/obj/spawner/simple/superrare15 = 4,
+	/obj/spawner/simple/superrare16 = 1,
+	/obj/spawner/simple/superrare17 = 1,
+	/obj/spawner/simple/superrare18 = 1,
+	/obj/spawner/simple/superrare19 = 1,
+	/obj/spawner/simple/superrare20 = 3,
+	/obj/spawner/simple/superrare21 = 3,
+	/obj/spawner/simple/superrare22 = 3,
 	)
-	var/list/picked_choice = pickweight(choices)
-	return picked_choice
 
 /obj/random/loot/armorinserts
 	name = "Basic Armor accessories"
@@ -798,76 +778,94 @@
 	icon_state = "randomsupply"
 
 /obj/random/loot/randomsupply/spawn_choices()
-	return list(/obj/landmark/rav/medstuff1 = 3,
-				/obj/landmark/rav/medstuff2 = 2,
-				/obj/landmark/rav/medstuff3 = 1,
-				/obj/landmark/rav/medstuff4 = 1,
-				/obj/landmark/rav/medstuff5 = 2,
-				/obj/landmark/rav/food1 = 4,
-				/obj/item/storage/firstaid/radiation = 1,
-				/obj/item/storage/firstaid/trauma = 2,
-				/obj/item/storage/firstaid/toxin = 1,
-				/obj/item/storage/firstaid/o2 = 1,
-				/obj/item/device/scanner/health = 1,
-				/obj/item/storage/mre/menu2 = 2,
-				/obj/item/storage/mre/menu3 = 1,
-				/obj/item/storage/mre/menu4 = 1)
+	return list(
+		/obj/spawner/simple/medstuff1 = 3,
+		/obj/spawner/simple/medstuff2 = 2,
+		/obj/spawner/simple/medstuff3 = 1,
+		/obj/spawner/simple/medstuff4 = 1,
+		/obj/spawner/simple/medstuff5 = 2,
+		/obj/spawner/simple/food1 = 4,
+		/obj/item/storage/firstaid/radiation = 1,
+		/obj/item/storage/firstaid/trauma = 2,
+		/obj/item/storage/firstaid/toxin = 1,
+		/obj/item/storage/firstaid/o2 = 1,
+		/obj/item/device/scanner/health = 1,
+		/obj/item/storage/mre/menu2 = 2,
+		/obj/item/storage/mre/menu3 = 1,
+		/obj/item/storage/mre/menu4 = 1
+	)
 
-/obj/landmark/rav/food1/New()
-	new /obj/item/reagent_containers/food/snacks/proteinbar(src.loc)
-	new /obj/item/reagent_containers/food/snacks/proteinbar(src.loc)
-	new /obj/item/reagent_containers/food/snacks/chocolatebar(src.loc)
-	new /obj/item/reagent_containers/food/snacks/candy(src.loc)
-	qdel(src)
+/obj/spawner/simple/food1
+	name = "food spawner 1"
+	to_spawn = list(
+		/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+		/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+		/obj/item/reagent_containers/food/snacks/chocolatebar = 1,
+		/obj/item/reagent_containers/food/snacks/candy = 1
+	)
 
-/obj/landmark/rav/medstuff1/New()
-	new /obj/item/stack/medical/ointment(src.loc)
-	new /obj/item/stack/medical/bruise_pack(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/pain(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/antirad(src.loc)
-	new /obj/item/reagent_containers/ivbag/nanoblood(src.loc)
-	new /obj/item/storage/firstaid/surgery(src.loc)
-	qdel(src)
+/obj/spawner/simple/medstuff1
+	name = "medical spawner 1"
+	to_spawn = list(
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/bruise_pack = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/pain = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/antirad = 1,
+		/obj/item/reagent_containers/ivbag/nanoblood = 1,
+		/obj/item/storage/firstaid/surgery = 1
+	)
 
-/obj/landmark/rav/medstuff2/New()
-	new /obj/item/storage/pill_bottle/antitox(src.loc)
-	new /obj/item/storage/pill_bottle/dylovene(src.loc)
-	new /obj/item/storage/pill_bottle/dexalin_plus(src.loc)
-	new /obj/item/storage/pill_bottle/inaprovaline(src.loc)
-	qdel(src)
 
-/obj/landmark/rav/medstuff3/New()
-	new /obj/item/storage/pill_bottle/citalopram(src.loc)
-	new /obj/item/storage/pill_bottle/antidexafen(src.loc)
-	new /obj/item/storage/pill_bottle/hyronalin(src.loc)
-	new /obj/item/storage/pill_bottle/spaceacillin(src.loc)
-	new /obj/item/storage/pill_bottle/sugariron(src.loc)
-	new /obj/item/storage/pill_bottle/tramadol(src.loc)
-	qdel(src)
+/obj/spawner/simple/medstuff2
+	name = "medical spawner 2"
+	to_spawn = list(
+		/obj/item/storage/pill_bottle/antitox = 1,
+		/obj/item/storage/pill_bottle/dylovene = 1,
+		/obj/item/storage/pill_bottle/dexalin_plus = 1,
+		/obj/item/storage/pill_bottle/inaprovaline = 1
+	)
 
-/obj/landmark/rav/medstuff4/New()
-	new /obj/item/storage/pill_bottle/antitox(src.loc)
-	new /obj/item/storage/pill_bottle/dermaline(src.loc)
-	new /obj/item/storage/pill_bottle/bicaridine(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/inaprovaline(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/dexalin_plus(src.loc)
-	qdel(src)
+/obj/spawner/simple/medstuff3
+	name = "medical spawner 3"
+	to_spawn = list(
+		/obj/item/storage/pill_bottle/citalopram = 1,
+		/obj/item/storage/pill_bottle/antidexafen = 1,
+		/obj/item/storage/pill_bottle/hyronalin = 1,
+		/obj/item/storage/pill_bottle/spaceacillin = 1,
+		/obj/item/storage/pill_bottle/sugariron = 1,
+		/obj/item/storage/pill_bottle/tramadol = 1
+	)
 
-/obj/landmark/rav/medstuff5/New()
-	new /obj/item/storage/pill_bottle/happy(src.loc)
-	new /obj/item/storage/pill_bottle/assorted(src.loc)
-	new /obj/item/storage/pill_bottle/methylphenidate(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/coagulant(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/combatstim(src.loc)
-	qdel(src)
+/obj/spawner/simple/medstuff4
+	name = "medical spawner 4"
+	to_spawn = list(
+		/obj/item/storage/pill_bottle/antitox = 1,
+		/obj/item/storage/pill_bottle/dermaline = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/inaprovaline = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/dexalin_plus = 1
+	)
 
-/obj/landmark/rav/medstuff6/New()
-	new /obj/item/storage/firstaid/combat(src.loc)
-	new /obj/item/stack/medical/advanced/ointment(src.loc)
-	new /obj/item/stack/medical/advanced/bruise_pack(src.loc)
-	new /obj/item/reagent_containers/ivbag/nanoblood(src.loc)
-	new /obj/item/reagent_containers/hypospray/autoinjector/combatstim(src.loc)
-	qdel(src)
+/obj/spawner/simple/medstuff5
+	name = "medical spawner 5"
+	to_spawn = list(
+		/obj/item/storage/pill_bottle/happy = 1,
+		/obj/item/storage/pill_bottle/assorted = 1,
+		/obj/item/storage/pill_bottle/methylphenidate = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/coagulant = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/combatstim = 1
+	)
+
+/obj/spawner/simple/medstuff6
+	name = "medical spawner 6"
+	to_spawn = list(
+		/obj/item/storage/firstaid/combat = 1,
+		/obj/item/stack/medical/advanced/ointment = 1,
+		/obj/item/stack/medical/advanced/bruise_pack = 1,
+		/obj/item/reagent_containers/ivbag/nanoblood = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/combatstim = 1
+	)
+
 
 /obj/random/loot/randomcolonyitems
 	name = "Random Colonial Items"
@@ -876,7 +874,7 @@
 
 /obj/random/loot/randomcolonyitems/spawn_choices()
 	return list(/obj/item/device/eftpos = 6,
-				/obj/landmark/rav/colitems3 = 4,
+				/obj/spawner/simple/colitems3 = 4,
 				/obj/item/grenade/frag/homemade = 2,
 				/obj/item/grenade/frag/high_yield = 1,
 				/obj/item/grenade/frag/high_yield/krak = 1,
@@ -884,35 +882,43 @@
 				/obj/item/stack/material/steel/twenty = 6,
 				/obj/item/stack/material/glass/fifty = 5,
 				/obj/item/device/bot_kit = 2,
-				/obj/landmark/rav/colitems4 = 3,
+				/obj/spawner/simple/colitems4 = 3,
 				/obj/item/device/synthesized_instrument/guitar = 1,
 				/obj/item/device/synthesized_instrument/violin = 1,
 				/obj/item/device/synthesized_instrument/trumpet = 1,
 				/obj/item/clothing/accessory/armor_plate/bodyglove2 = 1,
-				/obj/landmark/rav/colitems2 = 3,
-				/obj/landmark/rav/colitems1 = 6)
+				/obj/spawner/simple/colitems2 = 3,
+				/obj/spawner/simple/colitems1 = 6)
 
-/obj/landmark/rav/colitems1/New()
-	new /obj/item/device/geiger(src.loc)
-	new /obj/item/device/gps(src.loc)
-	new /obj/item/device/kit/suit(src.loc)
-	qdel(src)
+/obj/spawner/simple/colitems1
+	name = "colony item spawner 1"
+	to_spawn = list(
+		/obj/item/device/geiger = 1,
+		/obj/item/device/gps = 1,
+		/obj/item/device/kit/suit = 1
+	)
 
-/obj/landmark/rav/colitems2/New()
-	new /obj/item/auto_cpr(src.loc)
-	new /obj/item/autopsy_scanner(src.loc)
-	qdel(src)
+/obj/spawner/simple/colitems2
+	name = "colony item spawner 2"
+	to_spawn = list(
+		/obj/item/auto_cpr = 1,
+		/obj/item/autopsy_scanner = 1
+	)
 
-/obj/landmark/rav/colitems3/New()
-	new /obj/item/stack/barbwire(src.loc)
-	new /obj/item/stack/material/wood/maple/twentyfive(src.loc)
-	new /obj/item/flame/lighter/random(src.loc)
-	qdel(src)
+/obj/spawner/simple/colitems3
+	name = "colony item spawner 3"
+	to_spawn = list(
+		/obj/item/stack/barbwire = 1,
+		/obj/item/stack/material/wood/maple/twentyfive = 1,
+		/obj/item/flame/lighter/random = 1
+	)
 
-/obj/landmark/rav/colitems4/New()
-	new /obj/item/torch/self_lit(src.loc)
-	new /obj/item/flamethrower/full(src.loc)
-	qdel(src)
+/obj/spawner/simple/colitems4
+	name = "colony item spawner 4"
+	to_spawn = list(
+		/obj/item/torch/self_lit = 1,
+		/obj/item/flamethrower/full = 1
+	)
 
 /obj/random/loot/randomsupply/engineering
 	name = "Random Engineering Items"
@@ -921,71 +927,86 @@
 
 /obj/random/loot/randomsupply/engineering/spawn_choices()
 	return list(/obj/item/stack/material/steel/fifty = 6,
-				/obj/landmark/rav/engitems1 = 6,
-				/obj/landmark/rav/engitems2 = 2,
-				/obj/landmark/rav/engitems3 = 4,
-				/obj/landmark/rav/engitems4 = 4,
-				/obj/landmark/rav/engitems5 = 2,
-				/obj/landmark/rav/engitems6 = 2,
-				/obj/landmark/rav/engitems7 = 2,
+				/obj/spawner/simple/engitems1 = 6,
+				/obj/spawner/simple/engitems2 = 2,
+				/obj/spawner/simple/engitems3 = 4,
+				/obj/spawner/simple/engitems4 = 4,
+				/obj/spawner/simple/engitems5 = 2,
+				/obj/spawner/simple/engitems6 = 2,
+				/obj/spawner/simple/engitems7 = 2,
 				/obj/item/grenade/frag/high_yield/plasma = 1,
 				/obj/item/grenade/frag/high_yield/krak = 2,
-				/obj/landmark/rav/engitems8 = 2,
+				/obj/spawner/simple/engitems8 = 2,
 				/obj/item/cell/alien = 2)
 
-/obj/landmark/rav/engitems1/New()
-	new /obj/item/stack/barbwire(src.loc)
-	new /obj/item/stack/material/steel/twenty(src.loc)
-	new /obj/item/stack/material/glass/fifty(src.loc)
-	new /obj/item/stack/material/wood/maple/twentyfive(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems1
+	name = "engineering item spawner 1"
+	to_spawn = list(
+		/obj/item/stack/barbwire = 1,
+		/obj/item/stack/material/steel/twenty = 1,
+		/obj/item/stack/material/glass/fifty = 1,
+		/obj/item/stack/material/wood/maple/twentyfive = 1
+	)
 
-/obj/landmark/rav/engitems2/New()
-	new /obj/item/clothing/glasses/meson(src.loc)
-	new /obj/item/device/geiger(src.loc)
-	new /obj/item/device/gps/marker(src.loc)
-	new /obj/item/device/scanner/gas(src.loc)
-	new /obj/item/device/scanner/mining(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems2
+	name = "engineering item spawner 2"
+	to_spawn = list(
+		/obj/item/clothing/glasses/meson = 1,
+		/obj/item/device/geiger = 1,
+		/obj/item/device/gps/marker = 1,
+		/obj/item/device/scanner/gas = 1,
+		/obj/item/device/scanner/mining = 1
+	)
 
-/obj/landmark/rav/engitems3/New()
-	new /obj/item/airlock_brace(src.loc)
-	new /obj/item/ducttape(src.loc)
-	new /obj/item/cell/high(src.loc)
-	new /obj/item/extinguisher(src.loc)
-	new /obj/item/flame/lighter/random(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems3
+	name = "engineering item spawner 3"
+	to_spawn = list(
+		/obj/item/airlock_brace = 1,
+		/obj/item/ducttape = 1,
+		/obj/item/cell/high = 1,
+		/obj/item/extinguisher = 1,
+		/obj/item/flame/lighter/random = 1
+	)
 
-/obj/landmark/rav/engitems4/New()
-	new /obj/item/cell/high(src.loc)
-	new /obj/item/device/flashlight/maglight(src.loc)
-	new /obj/item/device/bot_kit(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems4
+	name = "engineering item spawner 4"
+	to_spawn = list(
+		/obj/item/cell/high = 1,
+		/obj/item/device/flashlight/maglight = 1,
+		/obj/item/device/bot_kit = 1
+	)
 
-/obj/landmark/rav/engitems5/New()
-	new /obj/item/cell/device/high/laspack(src.loc)
-	new /obj/item/cell/hyper(src.loc)
-	new /obj/item/cell/device/high/mechanicus(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems5
+	name = "engineering item spawner 5"
+	to_spawn = list(
+		/obj/item/cell/device/high/laspack = 1,
+		/obj/item/cell/hyper = 1,
+		/obj/item/cell/device/high/mechanicus = 1
+	)
 
-/obj/landmark/rav/engitems6/New()
-	new /obj/item/cell/device/high/melta(src.loc)
-	new /obj/item/cell/device/high/mechanicus(src.loc)
-	new /obj/item/device/scanner/spectrometer(src.loc)
-	new /obj/item/shuttle_beacon(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems6
+	name = "engineering item spawner 6"
+	to_spawn = list(
+		/obj/item/cell/device/high/melta = 1,
+		/obj/item/cell/device/high/mechanicus = 1,
+		/obj/item/device/scanner/spectrometer = 1,
+		/obj/item/shuttle_beacon = 1
+	)
 
-/obj/landmark/rav/engitems7/New()
-	new /obj/item/device/scanner/price(src.loc)
-	new /obj/item/device/scanner/reagent(src.loc)
-	new /obj/item/cane/concealed(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems7
+	name = "engineering item spawner 7"
+	to_spawn = list(
+		/obj/item/device/scanner/price = 1,
+		/obj/item/device/scanner/reagent = 1,
+		/obj/item/cane/concealed = 1
+	)
 
-/obj/landmark/rav/engitems8/New()
-	new /obj/item/tank/jetpack(src.loc)
-	new /obj/item/tank/jetpack(src.loc)
-	new /obj/item/clothing/accessory/armor_plate/bodyglovemech(src.loc)
-	qdel(src)
+/obj/spawner/simple/engitems8
+	name = "engineering item spawner 8"
+	to_spawn = list(
+		/obj/item/tank/jetpack = 2,
+		/obj/item/clothing/accessory/armor_plate/bodyglovemech = 1
+	)
 
 /obj/random/loot/randomsupply/tech
 	name = "Random Tech Lootbags"
@@ -1119,23 +1140,27 @@
 	icon_state = "ricehat"
 
 /obj/random/loot/lootartifacts/spawn_choices()
-	return list(/obj/landmark/rav/construct = 4,
-				/obj/landmark/rav/scrying = 2,
+	return list(/obj/spawner/simple/construct = 4,
+				/obj/spawner/simple/scrying = 2,
 				/obj/item/contract/wizard/telepathy = 4,
 				/obj/item/contract/boon/wizard/fireball = 2,
 				/obj/item/contract/boon/wizard/knock = 4,
 				/obj/item/spellbook/student = 1,
 				/obj/item/toy/cursedbear = 2)
 
-/obj/landmark/rav/construct/New()
-	new /obj/item/device/soulstone/full(src.loc)
-	new /obj/structure/constructshell/cult(src.loc)
-	qdel(src)
+/obj/spawner/simple/construct
+	name = "artifact spawner 1"
+	to_spawn = list(
+		/obj/item/device/soulstone/full = 1,
+		/obj/structure/constructshell/cult = 1
+	)
 
-/obj/landmark/rav/scrying/New()
-	new /obj/item/contract/wizard/xray(src.loc)
-	new /obj/item/scrying(src.loc)
-	qdel(src)
+/obj/spawner/simple/scrying
+	name = "artifact spawner 2"
+	to_spawn = list(
+		/obj/item/contract/wizard/xray = 1,
+		/obj/item/scrying = 1
+	)
 
 /obj/random/loot/rigloot
 	name = "RIG / HARDSUIT Gear Loot"
@@ -1145,53 +1170,63 @@
 /obj/random/loot/rigloot/spawn_choices()
 	return list(/obj/item/rig/ce = 3,
 				/obj/item/rig/light/ninja = 1,
-				/obj/landmark/rav/hardsuit1 = 2,
-				/obj/landmark/rav/hardsuit2 = 5,
-				/obj/landmark/rav/hardsuit3 = 5,
-				/obj/landmark/rav/hardsuit4 = 4,
-				/obj/landmark/rav/hardsuit5 = 5)
+				/obj/spawner/simple/hardsuit1 = 2,
+				/obj/spawner/simple/hardsuit2 = 5,
+				/obj/spawner/simple/hardsuit3 = 5,
+				/obj/spawner/simple/hardsuit4 = 4,
+				/obj/spawner/simple/hardsuit5 = 5)
 
-/obj/landmark/rav/hardsuit1/New()
-	new /obj/item/rig/military(src.loc)
-	new /obj/item/rig_module/actuators(src.loc)
-	new /obj/item/rig_module/device/clustertool/skrell(src.loc)
-	new /obj/item/rig_module/vision(src.loc)
-	new /obj/item/rig_module/grenade_launcher(src.loc)
-	qdel(src)
+/obj/spawner/simple/hardsuit1
+	name = "hardsuit spawner 1"
+	to_spawn = list(
+		/obj/item/rig/military = 1,
+		/obj/item/rig_module/actuators = 1,
+		/obj/item/rig_module/device/clustertool/skrell = 1,
+		/obj/item/rig_module/vision = 1,
+		/obj/item/rig_module/grenade_launcher = 1
+	)
 
-/obj/landmark/rav/hardsuit2/New()
-	new /obj/item/rig/hazard(src.loc)
-	new /obj/item/rig_module/device/welder(src.loc)
-	new /obj/item/rig_module/device/drill(src.loc)
-	new /obj/item/rig_module/device/orescanner(src.loc)
-	new /obj/item/rig_module/device/multitool(src.loc)
-	new /obj/item/rig_module/vision(src.loc)
-	qdel(src)
+/obj/spawner/simple/hardsuit2
+	name = "hardsuit spawner 2"
+	to_spawn = list(
+		/obj/item/rig/hazard = 1,
+		/obj/item/rig_module/device/welder = 1,
+		/obj/item/rig_module/device/drill = 1,
+		/obj/item/rig_module/device/orescanner = 1,
+		/obj/item/rig_module/device/multitool = 1,
+		/obj/item/rig_module/vision = 1
+	)
 
-/obj/landmark/rav/hardsuit3/New()
-	new /obj/item/rig/exploration(src.loc)
-	new /obj/item/rig_module/device/welder(src.loc)
-	new /obj/item/rig_module/cooling_unit(src.loc)
-	new /obj/item/rig_module/device/clustertool/skrell(src.loc)
-	qdel(src)
+/obj/spawner/simple/hardsuit3
+	name = "hardsuit spawner 3"
+	to_spawn = list(
+		/obj/item/rig/exploration = 1,
+		/obj/item/rig_module/device/welder = 1,
+		/obj/item/rig_module/cooling_unit = 1,
+		/obj/item/rig_module/device/clustertool/skrell = 1
+	)
 
-/obj/landmark/rav/hardsuit4/New()
-	new /obj/item/rig/hazmat(src.loc)
-	new /obj/item/rig_module/device/anomaly_scanner(src.loc)
-	new /obj/item/rig_module/cooling_unit(src.loc)
-	new /obj/item/rig_module/device/clustertool/skrell(src.loc)
-	new /obj/item/rig_module/fabricator(src.loc)
-	qdel(src)
+/obj/spawner/simple/hardsuit4
+	name = "hardsuit spawner 4"
+	to_spawn = list(
+		/obj/item/rig/hazmat = 1,
+		/obj/item/rig_module/device/anomaly_scanner = 1,
+		/obj/item/rig_module/cooling_unit = 1,
+		/obj/item/rig_module/device/clustertool/skrell = 1,
+		/obj/item/rig_module/fabricator = 1
+	)
 
-/obj/landmark/rav/hardsuit5/New()
-	new /obj/item/rig/industrial(src.loc)
-	new /obj/item/rig_module/device/rcd(src.loc)
-	new /obj/item/rig_module/cooling_unit(src.loc)
-	new /obj/item/rig_module/device/clustertool/skrell(src.loc)
-	new /obj/item/rig_module/vision(src.loc)
-	new /obj/item/rig_module/actuators(src.loc)
-	new /obj/item/rig_module/datajack(src.loc)
-	qdel(src)
+/obj/spawner/simple/hardsuit5
+	name = "hardsuit spawner 5"
+	to_spawn = list(
+		/obj/item/rig/industrial = 1,
+		/obj/item/rig_module/device/rcd = 1,
+		/obj/item/rig_module/cooling_unit = 1,
+		/obj/item/rig_module/device/clustertool/skrell = 1,
+		/obj/item/rig_module/vision = 1,
+		/obj/item/rig_module/actuators = 1,
+		/obj/item/rig_module/datajack = 1
+	)
 
 /obj/random/loot/valuableloot
 	name = "Valuable 40k Loot"

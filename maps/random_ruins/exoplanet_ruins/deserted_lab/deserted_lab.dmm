@@ -11,7 +11,6 @@
 /turf/simulated/floor/warhammer/carpetn00,
 /area/template_noop)
 "ad" = (
-/obj/random/loot,
 /obj/decal/cleanable/cobweb,
 /obj/decal/cleanable/blood,
 /obj/decal/cleanable/mucus,
@@ -58,7 +57,6 @@
 /turf/simulated/floor/warhammer/brothel,
 /area/template_noop)
 "al" = (
-/obj/random/loot,
 /obj/decal/cleanable/mucus,
 /turf/simulated/floor/warhammer/brothel,
 /area/template_noop)
@@ -90,7 +88,6 @@
 /turf/template_noop,
 /area/template_noop)
 "at" = (
-/obj/random/loot,
 /turf/simulated/floor/warhammer/brothel,
 /area/template_noop)
 "au" = (

@@ -8,7 +8,6 @@
 /turf/simulated/floor/plating,
 /area/bluespace_interlude/platform)
 "aV" = (
-/obj/random/loot,
 /turf/simulated/floor/plating,
 /area/bluespace_interlude/platform)
 "br" = (
@@ -175,7 +174,6 @@
 /area/bluespace_interlude/surroundings)
 "ze" = (
 /obj/structure/table/rack,
-/obj/random/loot,
 /turf/simulated/floor/plating,
 /area/bluespace_interlude/platform)
 "Bg" = (
@@ -222,8 +220,6 @@
 /area/bluespace_interlude/platform)
 "Kl" = (
 /obj/structure/table/rack,
-/obj/random/loot,
-/obj/random/loot,
 /turf/simulated/floor/plating,
 /area/bluespace_interlude/platform)
 "KL" = (

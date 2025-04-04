@@ -454,7 +454,7 @@
 #define INJECTION_PORT_DELAY 3 SECONDS // used by injectors to apply delay due to searching for a port on the injectee's suit
 
 
-//used by /proc/do_after
+//used by do_after()
 #define DO_USER_CAN_MOVE     FLAG(0)
 #define DO_USER_CAN_TURN     FLAG(1)
 #define DO_USER_UNIQUE_ACT   FLAG(2)

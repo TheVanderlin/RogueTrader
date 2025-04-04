@@ -2493,7 +2493,7 @@
 	icon_state = "door_closed";
 	id_tag = "escape_pod_12_hatch";
 	locked = 1;
-	name = "Escape Pod Seven Hatch"
+	name = "Escape Pod Twelve Hatch"
 	},
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/shuttle/escape_pod12/station)
@@ -2507,7 +2507,7 @@
 	icon_state = "door_closed";
 	id_tag = "escape_pod_13_hatch";
 	locked = 1;
-	name = "Escape Pod Eight Hatch"
+	name = "Escape Pod Thirteen Hatch"
 	},
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/shuttle/escape_pod13/station)
@@ -3030,7 +3030,7 @@
 /obj/machinery/door/airlock/external/escapepod{
 	icon_state = "door_closed";
 	id_tag = "escape_pod_12_berth_hatch";
-	name = "Escape Pod Seven"
+	name = "Escape Pod Twelve"
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/warhammer/tunnelchess,
@@ -3039,7 +3039,7 @@
 /obj/machinery/door/airlock/external/escapepod{
 	icon_state = "door_closed";
 	id_tag = "escape_pod_13_berth_hatch";
-	name = "Escape Pod Eight"
+	name = "Escape Pod Thirteen"
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/warhammer/tunnelchess,
@@ -11437,7 +11437,7 @@
 	dir = 4;
 	frequency = 1380;
 	id_tag = "escape_pod_12";
-	name = "escape pod seven controller";
+	name = "escape pod twelve controller";
 	pixel_x = -24;
 	tag_door = "escape_pod_12_hatch"
 	},
@@ -11451,7 +11451,7 @@
 	dir = 4;
 	frequency = 1380;
 	id_tag = "escape_pod_13";
-	name = "escape pod eight controller";
+	name = "escape pod thirteen controller";
 	pixel_x = -24;
 	tag_door = "escape_pod_13_hatch"
 	},
@@ -19768,6 +19768,17 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/warhammer/ceramic/blackstone,
 /area/rnd/office)
+"pOQ" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	frequency = 1380;
+	id_tag = "escape_pod_12_berth";
+	name = "escape pod twelve berth controller";
+	pixel_x = -24;
+	pixel_y = 24;
+	tag_door = "escape_pod_12_berth_hatch"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/maintenance/firstdeck/centralstarboard)
 "pPa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -22850,6 +22861,17 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/security/wing)
+"tKS" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	frequency = 1380;
+	id_tag = "escape_pod_13_berth";
+	name = "escape pod thirteen berth controller";
+	pixel_x = -24;
+	pixel_y = 24;
+	tag_door = "escape_pod_13_berth_hatch"
+	},
+/turf/simulated/floor/warhammer/plating,
+/area/maintenance/firstdeck/centralstarboard)
 "tLL" = (
 /obj/item/storage/briefcase,
 /obj/structure/table/rack/dark,
@@ -40927,7 +40949,7 @@ bNb
 bQb
 aeT
 afV
-rhO
+pOQ
 ahW
 aji
 aji
@@ -41735,7 +41757,7 @@ bOb
 bRb
 aeV
 afW
-rhO
+tKS
 aia
 aji
 aji

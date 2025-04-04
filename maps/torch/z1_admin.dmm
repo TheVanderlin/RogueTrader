@@ -8119,7 +8119,6 @@
 "aOh" = (
 /obj/floor_decal/industrial/outline/grey,
 /obj/structure/largecrate,
-/obj/random/loot,
 /obj/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/dark,
 /area/merchant_station)
@@ -8293,7 +8292,6 @@
 "aOL" = (
 /obj/structure/table/rack,
 /obj/random/contraband,
-/obj/random/loot,
 /obj/floor_decal/industrial/outline/grey,
 /obj/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/dark,
@@ -8802,7 +8800,6 @@
 /area/merchant_station)
 "aQH" = (
 /obj/structure/table/reinforced,
-/obj/random/loot,
 /obj/floor_decal/corner/blue{
 	dir = 10
 	},
@@ -8943,7 +8940,6 @@
 /area/merchant_station)
 "aRt" = (
 /obj/structure/table/rack,
-/obj/random/loot,
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aRu" = (
@@ -8952,8 +8948,6 @@
 	dir = 1
 	},
 /obj/decal/cleanable/dirt,
-/obj/random/loot,
-/obj/random/loot,
 /turf/simulated/floor/tiled,
 /area/merchant_station)
 "aRv" = (
@@ -9601,7 +9595,6 @@
 /obj/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/random/loot,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/merchant/home)
 "aTR" = (

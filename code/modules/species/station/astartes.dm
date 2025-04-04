@@ -127,7 +127,6 @@
 /mob/living/carbon/human/proc/astaforemperor()
 	set name = "For The Emperor"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -143,7 +142,6 @@
 /mob/living/carbon/human/proc/astaforemperorl()
 	set name = "For The Emperor!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -162,7 +160,6 @@
 /mob/living/carbon/human/proc/astachaos()
 	set name = "Chaos sighted"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -178,7 +175,6 @@
 /mob/living/carbon/human/proc/astacharge()
 	set name = "Charge!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -194,7 +190,6 @@
 /mob/living/carbon/human/proc/astacrush()
 	set name = "We'll crush enemies"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -210,7 +205,6 @@
 /mob/living/carbon/human/proc/astadamage()
 	set name = "Taking damage"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -226,7 +220,6 @@
 /mob/living/carbon/human/proc/astadiescum()
 	set name = "Die, scum!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -242,7 +235,6 @@
 /mob/living/carbon/human/proc/astaeatboltgun()
 	set name = "Eat boltgun!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -258,7 +250,6 @@
 /mob/living/carbon/human/proc/astafaithshield()
 	set name = "Faith is our shield"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -274,7 +265,6 @@
 /mob/living/carbon/human/proc/astafallback()
 	set name = "Fall back"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -290,7 +280,6 @@
 /mob/living/carbon/human/proc/astaforglory()
 	set name = "For the Imperium"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -306,7 +295,6 @@
 /mob/living/carbon/human/proc/astagrenades()
 	set name = "Let grenades fly!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -322,7 +310,6 @@
 /mob/living/carbon/human/proc/astakill()
 	set name = "Cleanse, purge, kill!"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -338,7 +325,6 @@
 /mob/living/carbon/human/proc/astanonestopus()
 	set name = "None stop us"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -354,7 +340,6 @@
 /mob/living/carbon/human/proc/astaourwrath()
 	set name = "Feel our wrath"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -370,7 +355,6 @@
 /mob/living/carbon/human/proc/astaready()
 	set name = "Weapon at ready"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -386,7 +370,6 @@
 /mob/living/carbon/human/proc/astatoglory()
 	set name = "To glory"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)
@@ -402,7 +385,6 @@
 /mob/living/carbon/human/proc/astaxenos()
 	set name = "Xenos spotted"
 	set category = "Astartes"
-	set desc = name
 	if(!ishuman(src))
 		return
 	if(src.stat == DEAD)

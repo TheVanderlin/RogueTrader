@@ -3,7 +3,7 @@
 Callbacks wrap a target, callable, and arguments to pass. See the dm reference for call().
 When the target is GLOBAL_PROC, the callable is global - otherwise it is a datum (or dead) reference.
 Callbacks are created with the new keyword via a global alias like:
-- var/datum/callback/instance = new Callback(GLOBAL_PROC, /proc/get_area, someObject)
+- var/datum/callback/instance = new Callback(GLOBAL_PROC, GLOBAL_PROC_REF(get_area), someObject)
 Callbacks are thin - they should be used with invoke or invoke_async.
 
 ** Invocation
@@ -15,13 +15,6 @@ on the first sleep, and so should be used only where results are not required.
 
 ** Callables
 Callables are proc names or proc references, with references preferred for safety (in most cases).
-These vary between 515 and older major versions:
-Before 515:
-- .proc/name refers to the last override of name on target, OR the global proc name.
-After 515:
-- src::name() must be used for the last override, or ::name() for the global.
-- nameof() is available at compile time to resolve safe proc names like nameof(/datum::fooBehavior()).
-  This can be preferable to direct refs in complex cases.
 A specific version of a proc may be called by fully specifying its type depth, like
 invoke(myLivingMob, /mob/living/proc/handle_vision)
 

@@ -58,7 +58,6 @@
 /area/djstation)
 "aw" = (
 /obj/random/closet,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/djstation)
 "ax" = (
@@ -100,7 +99,6 @@
 /area/djstation)
 "aE" = (
 /obj/structure/table/reinforced,
-/obj/random/loot,
 /obj/random/loot/randomsupply/engineering,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/djstation)

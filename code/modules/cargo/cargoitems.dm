@@ -26,7 +26,7 @@
 	GLOB.thrones += round(cost * GLOB.tax_rate, 1)
 	terminal.busy = TRUE
 	playsound(terminal, 'sound/effects/beam.ogg', 50, 0, -1)
-	addtimer(CALLBACK(src, .proc/drop_purchase, terminal), DEFAULT_DROP_TIME)
+	addtimer(CALLBACK(src, PROC_REF(drop_purchase), terminal), DEFAULT_DROP_TIME)
 	return TRUE
 
 /datum/cargo_entry/proc/drop_purchase(var/obj/machinery/computer/planetarytrade/terminal)

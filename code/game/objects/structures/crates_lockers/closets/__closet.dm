@@ -249,7 +249,7 @@
 
 #undef CLOSET_CHECK_TOO_BIG
 
-// If you adjust any of the values below, please also update /proc/unit_test_weight_of_path(var/path)
+// If you adjust any of the values below, please also update unit_test_weight_of_path(var/path)
 /obj/structure/closet/proc/content_size(atom/movable/AM)
 	if(ismob(AM))
 		var/mob/M = AM

@@ -1509,7 +1509,6 @@
 /area/lar_maria/dorms)
 "dY" = (
 /obj/structure/closet,
-/obj/random/loot,
 /turf/simulated/floor/wood,
 /area/lar_maria/dorms)
 "dZ" = (
@@ -1598,7 +1597,6 @@
 /area/lar_maria/dorms)
 "en" = (
 /obj/structure/closet,
-/obj/random/loot,
 /obj/random/accessory,
 /obj/item/clothing/head/soft/lar_maria/zhp_cap,
 /turf/simulated/floor/wood,

@@ -14715,7 +14715,6 @@
 	name = "Engine Radiator Shutters"
 	},
 /obj/machinery/door/firedoor,
-/obj/wallframe_spawn/reinforced/hull,
 /obj/wallframe_spawn/reinforced_phoron/hull,
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/engineering/engine_room)
@@ -15663,12 +15662,7 @@
 /turf/simulated/floor/warhammer/metal/alt,
 /area/engineering/engineering_bay)
 "Ss" = (
-/obj/machinery/door/blast/regular/open{
-	dir = 4;
-	id_tag = "elevatoreng";
-	name = "Restricted Lockdown"
-	},
-/turf/simulated/floor/tiled/steel_ridged,
+/turf/simulated/floor/warhammer/metal/alt,
 /area/hallway/primary/seconddeck/elevator)
 "St" = (
 /obj/structure/cable/green{
@@ -16380,7 +16374,6 @@
 	name = "Engine Radiator Shutters"
 	},
 /obj/machinery/door/firedoor,
-/obj/wallframe_spawn/reinforced/hull,
 /obj/wallframe_spawn/reinforced_phoron/hull,
 /turf/simulated/floor/warhammer/tunnelchess,
 /area/engineering/engine_room)

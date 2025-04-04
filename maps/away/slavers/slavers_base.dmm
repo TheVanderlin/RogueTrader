@@ -3376,7 +3376,6 @@
 /area/slavers_base/maint)
 "kT" = (
 /obj/structure/table/steel,
-/obj/random/loot,
 /turf/simulated/floor/ceiling,
 /area/slavers_base/maint)
 "kU" = (

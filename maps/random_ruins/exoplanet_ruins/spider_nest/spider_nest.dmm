@@ -75,7 +75,6 @@
 	flipped = 1
 	},
 /obj/random/junk,
-/obj/random/loot,
 /obj/item/paper,
 /turf/simulated/floor/lino,
 /area/template_noop)
@@ -143,11 +142,9 @@
 "z" = (
 /obj/decal/cleanable/blood,
 /obj/item/paper,
-/obj/random/loot,
 /turf/simulated/floor/lino,
 /area/template_noop)
 "A" = (
-/obj/random/loot,
 /obj/structure/sign/xenobio_1{
 	pixel_y = 32
 	},
@@ -159,7 +156,6 @@
 /turf/simulated/floor/lino,
 /area/template_noop)
 "C" = (
-/obj/random/loot,
 /mob/living/simple_animal/hostile/giant_spider/hunter,
 /turf/simulated/floor/lino,
 /area/template_noop)
@@ -171,7 +167,6 @@
 "E" = (
 /obj/spider/stickyweb,
 /obj/spider/cocoon,
-/obj/random/loot,
 /turf/simulated/floor/reinforced,
 /area/template_noop)
 "F" = (
@@ -190,7 +185,6 @@
 /obj/structure/grille/broken,
 /obj/random/trash,
 /obj/decal/cleanable/blood,
-/obj/random/loot,
 /turf/simulated/floor/plating,
 /area/template_noop)
 "I" = (
@@ -210,7 +204,6 @@
 /turf/simulated/floor/reinforced,
 /area/template_noop)
 "L" = (
-/obj/random/loot,
 /obj/spider/stickyweb,
 /obj/decal/cleanable/blood/gibs/limb,
 /obj/decal/cleanable/blood/drip,
@@ -242,7 +235,6 @@
 "W" = (
 /obj/spider/stickyweb,
 /obj/random/voidsuit,
-/obj/random/loot,
 /obj/decal/cleanable/vomit,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -32

@@ -119,10 +119,6 @@
 	can_reinforce = 0
 	flipped = -1
 
-/obj/structure/table/warhammer/Initialize()
-	auto_align()
-	. = ..()
-
 /obj/structure/table/warhammer/update_connections()
 	return
 

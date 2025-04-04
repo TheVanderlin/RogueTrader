@@ -1191,7 +1191,6 @@
 /area/space)
 "fP" = (
 /obj/structure/lattice,
-/obj/random/loot,
 /turf/space,
 /area/space)
 "fQ" = (
@@ -1361,7 +1360,6 @@
 /turf/simulated/floor/warhammer/metal/alt,
 /area/chaosship/raidership)
 "gs" = (
-/obj/random/loot,
 /turf/simulated/floor,
 /area/space)
 "gu" = (

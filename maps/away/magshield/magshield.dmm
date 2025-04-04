@@ -453,7 +453,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plating,
 /area/magshield/smes_storage)
 "bi" = (
@@ -1488,7 +1487,6 @@
 /area/magshield/north)
 "dS" = (
 /obj/floor_decal/industrial/warning,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/plating,
 /area/magshield/north)
 "dT" = (
@@ -4030,7 +4028,6 @@
 /area/magshield/south)
 "la" = (
 /obj/structure/closet,
-/obj/random/loot,
 /turf/simulated/floor/warhammer/metal/alt,
 /area/magshield/south)
 "lb" = (

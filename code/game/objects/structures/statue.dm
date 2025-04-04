@@ -563,7 +563,7 @@
 		if(prob(30))
 			snuff()
 
-/obj/item/torch/proc/light(mob/user, var/manually_lit = FALSE)
+/obj/item/torch/proc/light(mob/user, manually_lit = FALSE)
 	lit = TRUE
 	if(manually_lit && self_lighting == 1)
 		user.visible_message("<span class='notice'>\The [user] rips the lighting sheath off their [src].</span>")
@@ -609,18 +609,18 @@
 
 	var/obj/item/torch/lighttorch
 
-/obj/structure/torchwall/New()
-	..()
+/obj/structure/torchwall/Initialize()
+	. = ..()
 	if(prob(98))
 		lighttorch = new /obj/item/torch(src)
 		if(prob(75))
 			lighttorch.light(null, FALSE)
-	lighttorch.update_icon()
+		lighttorch.update_icon()
 	update_icon()
 
 /obj/structure/torchwall/Destroy()
 	QDEL_NULL(lighttorch)
-	. = ..()
+	return ..()
 
 
 /obj/structure/torchwall/update_icon()
@@ -739,7 +739,7 @@
 			overlays += overlay_image(icon, "lighter")
 	update_held_icon()
 
-/obj/item/pyre/proc/light(mob/user, var/manually_lit = FALSE)//This doesn't seem to update the icon appropiately, not idea why.
+/obj/item/pyre/proc/light(mob/user, manually_lit = FALSE)//This doesn't seem to update the icon appropiately, not idea why.
 	lit = TRUE
 	if(manually_lit && self_lighting == 1)
 		user.visible_message("<span class='notice'>\The [user] rips the lighting sheath off their [src].</span>")
@@ -784,7 +784,7 @@
 	. = ..()
 	update_icon()
 
-/obj/structure/fireplacebl/proc/light(var/mob/user, var/manually_lit = FALSE)//This doesn't seem to update the icon appropiately, no idea why.
+/obj/structure/fireplacebl/proc/light(mob/user, manually_lit = FALSE)//This doesn't seem to update the icon appropiately, no idea why.
 	lit = TRUE
 	if(manually_lit && self_lighting == 1)
 		user.visible_message("<span class='notice'>\The [user] rips the lighting sheath off their [src].</span>")
@@ -876,7 +876,7 @@
 	update_held_icon()
 
 
-/obj/item/campfire/proc/light(var/mob/user, var/manually_lit = FALSE)//This doesn't seem to update the icon appropiately, not idea why.
+/obj/item/campfire/proc/light(mob/user, manually_lit = FALSE)//This doesn't seem to update the icon appropiately, not idea why.
 	lit = TRUE
 	if(manually_lit && self_lighting == 1)
 		user.visible_message("<span class='notice'>\The [user] rips the lighting sheath off their [src].</span>")

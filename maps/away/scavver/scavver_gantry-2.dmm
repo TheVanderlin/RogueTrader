@@ -1990,7 +1990,6 @@
 	dir = 8;
 	icon_state = "railing0-1"
 	},
-/obj/random/loot,
 /obj/catwalk_plated/dark,
 /turf/simulated/floor,
 /area/space)
@@ -2922,7 +2921,6 @@
 /obj/item/reagent_containers/food/condiment/enzyme,
 /obj/random/donkpocket_box,
 /obj/item/material/kitchen/utensil/spork,
-/obj/random/loot,
 /mob/living/simple_animal/passive/mouse/brown/Tom,
 /turf/simulated/floor/wood/yew,
 /area/scavver/hab)
@@ -3259,7 +3257,6 @@
 /area/scavver/hab)
 "An" = (
 /obj/structure/railing/mapped,
-/obj/random/loot,
 /obj/catwalk_plated/dark,
 /turf/simulated/floor,
 /area/space)
@@ -4216,7 +4213,6 @@
 /area/scavver/gantry/lift)
 "JJ" = (
 /obj/structure/lattice,
-/obj/random/loot,
 /turf/space,
 /area/space)
 "JK" = (
