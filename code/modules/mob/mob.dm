@@ -757,6 +757,10 @@
 		regenerate_icons()
 	else if( lying != lying_prev )
 		update_icons()
+		if(resting)
+			rest.icon_state = "rest1"
+		else
+			rest.icon_state = "rest0"
 
 /mob/proc/reset_layer()
 	if(lying)

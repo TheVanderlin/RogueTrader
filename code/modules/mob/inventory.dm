@@ -337,6 +337,8 @@
 		else
 			I.dropInto(loc)
 		I.dropped(src)
+	if(hud_used)
+		hud_used.add_inventory_overlay()
 	return 1
 
 

@@ -45,6 +45,7 @@
 	var/obj/screen/purged = null
 	var/obj/screen/internals = null
 	var/obj/screen/oxygen = null
+	var/obj/screen/rest = null
 	var/obj/screen/i_select = null
 	var/obj/screen/m_select = null
 	var/obj/screen/toxin = null
@@ -126,6 +127,7 @@
 	var/singleton/move_intent/default_walk_intent
 	var/singleton/move_intent/default_run_intent
 
+	var/using_alt_hud = 0 //For the lunahud.
 	var/obj/buckled = null//Living
 	var/obj/item/l_hand = null//Living
 	var/obj/item/r_hand = null//Living

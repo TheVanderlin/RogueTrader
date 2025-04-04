@@ -27,12 +27,14 @@
 	var/obj/screen/lingchemdisplay
 	var/obj/screen/r_hand_hud_object
 	var/obj/screen/l_hand_hud_object
+	var/obj/screen/swaphands_hud_object
 	var/obj/screen/action_intent
 	var/obj/screen/move_intent
 	var/obj/screen/stamina/stamina_bar
 
 	var/list/adding
 	var/list/other
+	var/list/all_inv = list() //All inventory.
 	var/list/obj/screen/hotkeybuttons
 
 	var/obj/screen/movable/action_button/hide_toggle/hide_actions_toggle
@@ -56,13 +58,106 @@
 	hotkeybuttons = null
 	mymob = null
 
+/datum/hud/proc/add_inventory_overlay() //THIS SHIT IS UNHOLY! DON'T FUCK WITH IT UNLESS YOU KNOW WHAT YOU'RE DOING!
+	if(!mymob)
+		return
+	if(!ishuman(mymob))
+		return
+	for(var/obj/screen/S in all_inv)
+		S.overlays.Cut()//Clear all overlays.
+	var/mob/living/carbon/human/H = mymob
+	for(var/gear_slot in H.species.hud.gear)
+		var/list/hud_data = H.species.hud.gear[gear_slot]
+		switch(hud_data["slot"])
+			if(slot_shoes)
+				if(H.shoes)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "shoes")
+							S.overlays += "hud_fill"
+			if(slot_l_ear)
+				if(H.l_ear)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "l_ear")
+							S.overlays += "hud_fill"
+			if(slot_r_ear)
+				if(H.r_ear)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "r_ear")
+							S.overlays += "hud_fill"
+			if(slot_gloves)
+				if(H.gloves)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "gloves")
+							S.overlays += "hud_fill"
+			if(slot_glasses)
+				if(H.glasses)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "eyes")
+							S.overlays += "hud_fill"
+			if(slot_s_store)
+				if(H.s_store)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "back2")
+							S.overlays += "hud_fill"
+			/* if(slot_tie) no neck slot
+				if(H.tie_slot)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "neck")
+							S.overlays += "hud_fill" */
+			if(slot_belt)
+				if(H.belt)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "belt")
+							S.overlays += "hud_fill"
+			if(slot_head)
+				if(H.head)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "head")
+							S.overlays += "hud_fill"
+
+			if(slot_w_uniform)
+				if(H.w_uniform)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "i_clothing")
+							S.overlays += "hud_fill"
+
+			if(slot_wear_id)
+				if(H.wear_id)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "id")
+							S.overlays += "hud_fill"
+
+			if(slot_back)
+				if(H.back)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "back")
+							S.overlays += "hud_fill"
+
+			if(slot_wear_suit)
+				if(H.wear_suit)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "o_clothing")
+							S.overlays += "hud_fill"
+			if(slot_wear_mask)
+				if(H.wear_mask)
+					for(var/obj/screen/S in all_inv)
+						if(S.name == "mask")
+							S.overlays += "hud_fill"
+
 /datum/hud/proc/update_stamina()
 	if(mymob && stamina_bar)
-		stamina_bar.invisibility = INVISIBILITY_MAXIMUM
-		var/stamina = mymob.get_stamina()
-		if(stamina < 100)
-			stamina_bar.invisibility = 0
-			stamina_bar.icon_state = "priv_prog_bar_[floor(stamina/5)*5]"
+		switch((mymob.get_stamina()))
+			if(100 to INFINITY)		stamina_bar.icon_state = "stamina0"
+			if(90 to 100)			stamina_bar.icon_state = "stamina1"
+			if(80 to 90)			stamina_bar.icon_state = "stamina2"
+			if(70 to 80)			stamina_bar.icon_state = "stamina3"
+			if(60 to 70)			stamina_bar.icon_state = "stamina4"
+			if(50 to 60)			stamina_bar.icon_state = "stamina5"
+			if(40 to 50)			stamina_bar.icon_state = "stamina6"
+			if(30 to 40)			stamina_bar.icon_state = "stamina7"
+			if(20 to 30)			stamina_bar.icon_state = "stamina8"
+			if(10 to 20)			stamina_bar.icon_state = "stamina9"
+			else					stamina_bar.icon_state = "stamina10"
 
 /datum/hud/proc/hidden_inventory_update()
 	if(!mymob) return
@@ -271,6 +366,5 @@
 /obj/screen/stamina
 	name = "stamina"
 	icon = 'icons/effects/progessbar.dmi'
-	icon_state = "prog_bar_100"
-	invisibility = INVISIBILITY_MAXIMUM
+	icon_state = "stamina0"
 	screen_loc = ui_stamina

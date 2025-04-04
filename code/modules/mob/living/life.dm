@@ -220,6 +220,10 @@
 /mob/living/proc/handle_hud_icons()
 	handle_hud_icons_health()
 	handle_hud_glasses()
+	if(resting)
+		rest.icon_state = "rest1"
+	else
+		rest.icon_state = "rest0"
 
 /mob/living/proc/handle_hud_icons_health()
 	return
