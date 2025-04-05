@@ -385,7 +385,8 @@ This saves us from having to call add_fingerprint() any time something is put in
 	// if we replaced an item, delete the old item. do this at the end to make the replacement seamless
 	if(old_item)
 		qdel(old_item)
-
+	if(hud_used)
+		hud_used.add_inventory_overlay()
 	return 1
 
 //Checks if a given slot can be accessed at this time, either to equip or unequip I

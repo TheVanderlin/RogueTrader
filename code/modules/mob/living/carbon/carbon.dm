@@ -178,6 +178,11 @@
 		else
 			hud_used.l_hand_hud_object.icon_state = "l_hand_inactive"
 			hud_used.r_hand_hud_object.icon_state = "r_hand_active"
+	if(hud_used.swaphands_hud_object)
+		if(hand)	//This being 1 means the left hand is in use
+			hud_used.swaphands_hud_object.dir = 2
+		else
+			hud_used.swaphands_hud_object.dir = 1
 	var/obj/item/I = get_active_hand()
 	if(istype(I))
 		I.on_active_hand(src)

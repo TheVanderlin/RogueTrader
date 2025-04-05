@@ -146,10 +146,10 @@
 	allstate = 1
 
 /obj/screen/fullscreen/pain
-	icon_state = "brutedamageoverlay6"
-	alpha = 0
+	icon_state = "blank"
+	screen_loc = "WEST,SOUTH to EAST,NORTH"
 
 /obj/screen/fullscreen/noise2
 	icon = 'icons/mob/noise.dmi'
-	icon_state = "3j"
-	alpha = 0
+	icon_state = "blank"
+	screen_loc = "WEST,SOUTH to EAST,NORTH"

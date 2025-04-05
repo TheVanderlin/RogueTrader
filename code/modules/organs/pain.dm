@@ -1,7 +1,11 @@
-/mob/proc/flash_pain(target)
-	if(pain)
-		animate(pain, alpha = target, time = 15, easing = ELASTIC_EASING)
-		animate(pain, alpha = 0, time = 20)
+/mob/proc/flash_weakest_pain()
+	flick("weakest_pain",pain)
+
+/mob/proc/flash_weak_pain()
+	flick("weak_pain",pain)
+
+/mob/proc/flash_pain()
+	flick("pain",pain)
 
 /mob/var/last_pain_message
 /mob/var/next_pain_time = 0
@@ -9,16 +13,45 @@
 // message is the custom message to be displayed
 // power decides how much painkillers will stop the message
 // force means it ignores anti-spam timer
-/mob/living/carbon/proc/custom_pain(message, power, force, obj/item/organ/external/affecting, nohalloss)
+/mob/living/carbon/proc/custom_pain(message, power, force, obj/item/organ/external/affecting, nohalloss, flash_pain)
 	if(stat || !can_feel_pain() || chem_effects[CE_PAINKILLER] > power)
 		return 0
 
 	power -= chem_effects[CE_PAINKILLER]/2	//Take the edge off.
 
 	// Excessive halloss is horrible, just give them enough to make it visible.
-	if(!nohalloss && power)
+	if(!nohalloss && (power || flash_pain))
+		var/actual_flash
 		if(affecting)
 			affecting.add_pain(ceil(power/2))
+			if(power > flash_pain)
+				actual_flash = power
+			else
+				actual_flash = flash_pain
+
+			switch(actual_flash)
+				if(1 to 70)
+					/* if(has_quirk(/datum/quirk/tough))
+						return 0 */
+					flash_weakest_pain()
+				if(70 to 140)
+					/* if(has_quirk(/datum/quirk/tough))
+						if(prob(75))
+							return 0 */
+					flash_weak_pain()
+					if(stuttering < 10)
+						stuttering += 5
+				if(140 to INFINITY)
+					/* if(has_quirk(/datum/quirk/tough))
+						if(prob(50))
+							return 0 */
+					flash_pain()
+					if(stuttering < 10)
+						stuttering += 10
+					if(prob(5))
+						Stun(5)//makes you drop what you're holding.
+						Weaken(1)//knocks you over
+						// agony_scream()
 		else
 			adjustHalLoss(ceil(power/2))
 
@@ -85,7 +118,7 @@
 				msg = "Your [damaged_organ.name] [burning ? "burns" : "hurts"] badly!"
 			if(91 to 10000)
 				msg = "OH GOD! Your [damaged_organ.name] is [burning ? "on fire" : "hurting terribly"]!"
-		custom_pain(msg, maxdam, prob(10), damaged_organ, TRUE)
+		custom_pain(msg, maxdam, prob(10), damaged_organ, TRUE, flash_pain = maxdam)
 	// Damage to internal organs hurts a lot.
 	for(var/obj/item/organ/internal/I in internal_organs)
 		if(prob(1) && !((I.status & ORGAN_DEAD) || BP_IS_ROBOTIC(I)) && I.damage > 5)

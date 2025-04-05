@@ -357,5 +357,5 @@ GLOBAL_LIST_INIT(possible_say_verbs, list(
 /mob/living/silicon/pai/start_pulling(atom/movable/AM)
 	. = ..()
 	if (pulling)
-		pullin.screen_loc = ui_pull_resist
+		pullin.screen_loc = ui_pull
 		client.screen |= pullin
