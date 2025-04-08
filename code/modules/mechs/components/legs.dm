@@ -19,9 +19,6 @@
 	if(!motivator)
 		to_chat(user, SPAN_WARNING("It is missing an actuator."))
 
-/obj/item/mech_component/propulsion/ready_to_install()
-	return motivator
-
 /obj/item/mech_component/propulsion/update_components()
 	motivator = locate() in src
 

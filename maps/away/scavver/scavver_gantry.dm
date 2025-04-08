@@ -70,7 +70,7 @@
 		"Desperado" = list("nav_gantry_desperado")
 	)
 
-/obj/item/mech_component/sensors/light/salvage
+/obj/item/mech_component/chassis/pod/salvage
 	prebuilt_software = list(/obj/item/circuitboard/exosystem/utility, /obj/item/circuitboard/exosystem/engineering)
 
 /mob/living/exosuit/premade/salvage_gantry
@@ -79,7 +79,7 @@
 
 /mob/living/exosuit/premade/salvage_gantry/Initialize()
 	if(!body)
-		body = new /obj/item/mech_component/chassis/pod(src)
+		body = new /obj/item/mech_component/chassis/pod/salvage(src)
 		body.color = COLOR_ORANGE
 	if(!legs)
 		legs = new /obj/item/mech_component/propulsion/spider(src)
@@ -88,7 +88,7 @@
 		arms = new /obj/item/mech_component/manipulators/powerloader(src)
 		arms.color = COLOR_GUNMETAL
 	if(!head)
-		head = new /obj/item/mech_component/sensors/light/salvage(src)
+		head = new /obj/item/mech_component/sensors/light(src)
 		head.color = COLOR_GUNMETAL
 
 	. = ..()

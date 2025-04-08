@@ -33,7 +33,6 @@
 	. = ..()
 	if(ready_to_install())
 		to_chat(user, SPAN_NOTICE("It is ready for installation."))
-	else
 		show_missing_parts(user)
 
 //These icons have multiple directions but before they're attached we only want south.

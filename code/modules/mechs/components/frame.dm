@@ -181,7 +181,7 @@
 	// Screwdriver - Finish construction
 	if (isScrewdriver(tool))
 		// Check for basic components.
-		if (!(arms && legs && head && body))
+		if (!(body))
 			USE_FEEDBACK_FAILURE("\The [src] is still missing parts and cannot be completed.")
 			return TRUE
 		// Check for wiring.
@@ -208,7 +208,7 @@
 		if (!user.do_skilled((tool.toolspeed * 5) SECONDS, SKILL_DEVICES, src) || !user.use_sanity_check(src, tool))
 			return TRUE
 		// Check for basic components.
-		if (!(arms && legs && head && body))
+		if (!(body))
 			USE_FEEDBACK_FAILURE("\The [src] is still missing parts and cannot be completed.")
 			return TRUE
 		// Check for wiring.
@@ -364,6 +364,10 @@
 		if (body)
 			USE_FEEDBACK_FAILURE("\The [src] already has \a [body] installed.")
 			return TRUE
+		var/obj/item/mech_component/chassis/m_chest = tool
+		if (m_chest.total_damage >= m_chest.max_damage)
+			USE_FEEDBACK_FAILURE("\The [m_chest] is too badly damaged to attach!")
+			return TRUE
 		if (!install_component(tool, user))
 			return TRUE
 		body = tool
@@ -390,6 +394,12 @@
 	if (istype(tool, /obj/item/mech_component/sensors))
 		if (head)
 			USE_FEEDBACK_FAILURE("\The [src] already has \a [head] installed.")
+			return TRUE
+		if(!body)
+			USE_FEEDBACK_FAILURE("You must attach a body before attaching sensors!")
+			return TRUE
+		if (body && !body.sensor_housing)
+			USE_FEEDBACK_FAILURE("This type of chassis cannot support sensors!")
 			return TRUE
 		if (!install_component(tool, user))
 			return TRUE

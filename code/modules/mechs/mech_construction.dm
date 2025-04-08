@@ -68,11 +68,11 @@
 		if(ME.restricted_hardpoints && !(system_hardpoint in ME.restricted_hardpoints))
 			return FALSE
 		if(ME.restricted_software)
-			if(!head || !head.software)
+			if(!body || !body.software)
 				return FALSE
 			var/found
 			for(var/software in ME.restricted_software)
-				if(software in head.software.installed_software)
+				if(software in body.software.installed_software)
 					found = TRUE
 					break
 			if(!found)
